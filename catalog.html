@@ -7,30 +7,37 @@
   </head>
   <body>
     <header class="main-header">
+      <a class="main-header-logo" href="index.html">DEVICE</a>
+      <span class="main-header-search">Поиск по сайту</span>
       <nav class="main-navigation">
-        <a class="main-header-logo" href="#">
-          <span>DEVICE</span>
-        </a>
         <ul class="user-navigation">
-          <li class="navigation-item search">Поиск по сайту</li>
-          <li class="navigation-item user">Валентин Петухов</li>
-          <li class="navigation-item logout">Выйти</li>
-          <li class="navigation-item compare">Сравнить</li>
-          <li class="navigation-item cart">Корзина</li>
+          <li class="navigation-item user">
+            <a href="#">Валентин Петухов</a>
+          </li>
+          <li class="navigation-item logout">
+            <a href="#">Выйти</a>
+          </li>
+          <li class="navigation-item compare">
+            <a href="#">Сравнить</a>
+          </li>
+          <li class="navigation-item cart">
+            <a href="#">Корзина</a>
+          </li>
         </ul>
         <ul class="header-services-list">
-          <li class="services-item">Каталог товаров</li>
-          <li class="services-item">Доставка</li>
-          <li class="services-item">Гарантия</li>
-          <li class="services-item">Контакты</li>
-        </ul>
-        <ul class="header-calalog-list">
-          <li class="catalog-item">Виртуальная реальность</li>
-          <li class="catalog-item">Фитнес-браслеты</li>
-          <li class="catalog-item">Квадрокоптеры</li>
-          <li class="catalog-item">Моноподы для селфи</li>
-          <li class="catalog-item">Умные часы</li>
-          <li class="catalog-item">Экшн-камеры</li>
+          <li class="services-item"><a href="products.html">Каталог товаров</a>
+            <ul class="header-calalog-list">
+              <li class="catalog-item"><a href="#">Виртуальная реальность</a></li>
+              <li class="catalog-item"><a href="#">Фитнес-браслеты</a></li>
+              <li class="catalog-item"><a href="#">Квадрокоптеры</a></li>
+              <li class="catalog-item"><a>Моноподы для селфи</a></li>
+              <li class="catalog-item"><a href="#">Умные часы</a></li>
+              <li class="catalog-item"><a href="#">Экшн-камеры</a></li>
+            </ul>
+          </li>
+          <li class="services-item"><a href="delivery.html">Доставка</a></li>
+          <li class="services-item"><a href="assurance.html">Гарантия</a></li>
+          <li class="services-item"><a href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -44,12 +51,13 @@
         <li>
           <a href="#">Каталог товаров</a>
         </li>
-        <li class="breadcrumbs-current">Моноподы для селфи</li>
+        <li class="breadcrumbs-current"><a>Моноподы для селфи</a></li>
       </ul>
       <section class="filter">
         <h2>Фильтр:</h2>
         <h3 class="filter-price">стоимость</h3>
-        <input type="range">
+        <!-- тут будет форма -->
+        <!-- <input type="range">
         <h3 class="filter-color">цвет</h3>
         <p>
           <input type="checkbox" id="black" name="black" value="black">
@@ -81,20 +89,18 @@
           <label>Нет</label>
         </p>
 
-        <input type="submit" value="Показать">
+        <input type="submit" value="Показать"> -->
       </section>
 
       <section class="sort">
         <h2>Cортировка:</h2>
         <ul class="sort-list">
-          <li class="sort-item">По цене</li>
-          <li class="sort-item">По типу</li>
-          <li class="sort-item">По популярности</li>
+          <li class="sort-item current"><a href="#">По цене</a></li>
+          <li class="sort-item"><a href="#">По типу</a></li>
+          <li class="sort-item"><a href="#">По популярности</a></li>
+          <li class="sort-item"><a href="#">стрелка вверх</a></li>
+          <li class="sort-item current"><a href="#">стрелка вниз</a></li>
         </ul>
-        <p class="sort-buttons">
-          <span class="sort-button up"></span>
-          <span class="sort-button down"></span>
-        </p>
       </section>
       <section class="catalog">
         <h2 class="visually-hidden">Список моноподов</h2>
@@ -131,8 +137,11 @@
           </li>
         </ul>
         <div class="catalog-nav">
-          <span class="catalog-nav-button prev"></span>
+
           <ul class="pagination-list">
+            <li class="pagination-button prev">
+              <a href="#">Назад</a>
+            </li>
             <li class="pagination-item pagination-item-current">
               <a href="#">1</a>
             </li>
@@ -142,35 +151,48 @@
             <li class="pagination-item">
               <a href="#">3</a>
             </li>
+            <li class="pagination-button next">
+              <a href="#">Вперед</a>
+            </li>
           </ul>
-          <span class="catalog-nav-button next"></span>
         </div>
       </section>
     </main>
 
     <footer class="main-footer">
       <div class="footer-wrapper">
-        <a class="footer-logo" href="#">
-          <span>DEVICE</span>
-        </a>
+        <a class="footer-logo" href="index.html">DEVICE</a>
         <ul class="user-navigation">
-          <li class="navigation-item user">Валентин Петухов</li>
-          <li class="navigation-item logout">Выйти</li>
-          <li class="navigation-item compare">Сравнить</li>
-          <li class="navigation-item cart">Корзина</li>
+          <li class="navigation-item user">
+            <a href="#">Валентин Петухов</a>
+          </li>
+          <li class="navigation-item logout">
+            <a href="#">Выйти</a>
+          </li>
+          <li class="navigation-item compare">
+            <a href="#">Сравнить</a>
+          </li>
+          <li class="navigation-item cart">
+            <a href="#">Корзина</a>
+          </li>
         </ul>
       </div>
       <div class="footer-wrapper">
         <span class="footer-address">г. Москва, ул. Строителей, 15</span>
         <ul class="footer-services-list">
-          <li class="services-item">Доставка</li>
-          <li class="services-item">Гарантия</li>
-          <li class="services-item">Контакты</li>
+          <li class="services-item">
+            <a href="delivery.html">Доставка</a>
+          </li>
+          <li class="services-item">
+            <a href="assurance.html">Гарантия</a>
+          </li>
+          <li class="services-item">
+            <a href="contacts.html">Контакты</a>
+          </li>
         </ul>
         <span class="footer-phone">Тел.: +7 (495) 495-95-95</span>
       </div>
       <div class="footer-wrapper">
-        <span class="footer-decorative-line"></span>
         <ul class="footer-social-list">
           <li class="social-item">
             <a href="#">
