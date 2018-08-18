@@ -8,10 +8,15 @@
   <body>
     <header class="main-header">
       <a class="main-header-logo">DEVICE</a>
-      <span class="main-navigation-search">Поиск по сайту</span>
+      <p class="main-navigation-search">
+        <label class="visually-hidden" for="main-search">Поиск по сайту</label>
+        <input id='main-search' type="search" placeholder="Поиск по сайту">
+      </p>
       <nav class="main-navigation">
         <ul class="user-navigation">
-          <li class="navigation-item login"><a href="#">Войти</a></li>
+          <li class="navigation-item login">
+            <a class='login-link' href="#">Войти</a>
+          </li>
           <li class="navigation-item compare"><a href="#">Сравнить</a></li>
           <li class="navigation-item cart"><a href="#">Корзина</a></li>
         </ul>
@@ -37,6 +42,14 @@
         <h1 class="visually-hidden">Магазин гаджетов Device</h1>
         <section class="promo-products slider">
             <h2 class="visually-hidden">Лучшие товары</h2>
+            <input type="radio" id="slider-btn-1" name="promo" checked>
+            <input type="radio" id="slider-btn-2" name="promo">
+            <input type="radio" id="slider-btn-3" name="promo">
+            <div class="slider-controls">
+              <label class='button' for="slider-btn-1">Первый слайд</label>
+              <label class='button' for="slider-btn-2">Второй слайд</label>
+              <label class='button' for="slider-btn-3">Третий слайд</label>
+            </div>
             <div class="slider-product">
               <h3 class="visually-hidden">Монопод</h3>
               <img src="img/product-1.png" width="384" height="486" alt="product-1" class="product-image">
@@ -201,14 +214,30 @@
 
         <section class="modal modal-login">
           <h2 class="visually-hidden">Форма авторизации</h2>
-          <!-- Здесь будет форма -->
-          <span class="modal-close">Закрыть</span>
+
+          <form class="mail-form" action="https://echo.htmlacademy.ru" method="post">
+            <p>
+              <label for="modal-name">Ваше имя:</label>
+              <input id='modal-name' type="text" name="user-name" placeholder="Имя Фамилия">
+            </p>
+            <p>
+              <label for="modal-email">Ваш e-mail:</label>
+              <input id='modal-email' type="email" name="user-email" placeholder="email@example.com">
+            </p>
+            <p>
+              <label for="modal-text">Текст письма:</label>
+              <textarea id='modal-text' name='mail-text'>В свободной форме</textarea>
+            </p>
+            <button class="button" type="submit">Отправить</button>
+          </form>
+
+          <button class="modal-close-button" type="button">закрыть</button>
         </section>
 
         <section class="modal modal-map">
           <h2 class="visually-hidden">Как до нас добраться</h2>
-          <img src="img/map-big.jpg" width='960' height='559' alt="Как до нас добраться">
-          <span class="modal-close">Закрыть</span>
+          <img src="img/map-big.jpg" width='960' height='559' alt="Офис компании по адресу г. Москва, ул. Строителей, 15">
+          <button class="modal-close-button" type="button">закрыть</button>
         </section>
     </main>
 
