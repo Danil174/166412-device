@@ -8,10 +8,13 @@
   <body>
     <header class="main-header">
       <a class="main-header-logo">DEVICE</a>
-      <p class="main-navigation-search">
+      <form class="main-navigation-search" action="https://echo.htmlacademy.ru" method="get">
         <label class="visually-hidden" for="main-search">Поиск по сайту</label>
         <input id='main-search' type="search" placeholder="Поиск по сайту">
-      </p>
+        <button class="search-icon" type="submit">
+          <span class="visually-hidden">поиск</span>
+        </button>
+      </form>
       <nav class="main-navigation">
         <ul class="user-navigation">
           <li class="navigation-item login">
