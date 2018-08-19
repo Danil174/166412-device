@@ -10,10 +10,8 @@
       <a class="main-header-logo" href="index.html">DEVICE</a>
       <form class="main-navigation-search" action="https://echo.htmlacademy.ru" method="get">
         <label class="visually-hidden" for="main-search">Поиск по сайту</label>
-        <input id='main-search' type="search" name='main-search' placeholder="Поиск по сайту">
-        <button class="search-icon" type="submit">
-          <span class="visually-hidden">поиск</span>
-        </button>
+        <input id="main-search" type="search" name="main-search" placeholder="Поиск по сайту">
+        <button class="search-button" type="submit">поиск</button>
       </form>
       <nav class="main-navigation">
         <ul class="user-navigation">
@@ -69,11 +67,11 @@
               <span class="price-range"></span>
               <span class="icon-min-price">Минимальная цена</span>
               <span class="icon--price">Максимальная цена</span>
-              <span class="min-price-amount">от 0</span>
-              <span class="max-price-amount">до 5000</span>
+              <label for="min-price">от 0</label>
+              <input id="min-price" type="text" name="min-price" placeholder="" value="0">
+              <label for="max-price">до 5000</label>
+              <input id="max-price" type="text" name="max-price" placeholder="" value="5000">
             </div>
-            <label class="visually-hidden" for="price">Цена</label>
-            <input class="visually-hidden" id="price" type="range" value="5000" min="0" max="8500" step="100">
           </fieldset>
           <fieldset>
             <legend>Цвет</legend>
@@ -136,29 +134,29 @@
             </h3>
             <img src="img/catalog-item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
             <span class="catalog-item-price">500 руб.</span>
-            <a class="button item-button" href='#'>В корзину</a>
-            <a class="compare-button" href='#'>Добавить к сравнению</a>
+            <a class="button item-button" href="#">В корзину</a>
+            <a class="compare-button" href="#">Добавить к сравнению</a>
           </li>
           <li class="catalog-item">
             <h3><a href="catalog-item.html">Профессиональная селфи-палка</a></h3>
             <img src="img/catalog-item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
             <span class="catalog-item-price">1 500 руб.</span>
-            <a class="button item-button" href='#'>В корзину</a>
-            <a class="compare-button" href='#'>Добавить к сравнению</a>
+            <a class="button item-button" href="#">В корзину</a>
+            <a class="compare-button" href="#">Добавить к сравнению</a>
           </li>
           <li class="catalog-item">
             <h3><a href="catalog-item.html">Непотопляемая селфи-палка</a></h3>
             <img src="img/catalog-item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
             <span class="catalog-item-price">2 500 руб.</span>
-            <a class="button item-button" href='#'>В корзину</a>
-            <a class="compare-button" href='#'>Добавить к сравнению</a>
+            <a class="button item-button" href="#">В корзину</a>
+            <a class="compare-button" href="#">Добавить к сравнению</a>
           </li>
           <li class="catalog-item">
             <h3><a href="catalog-item.html">Селфи-палка «Следуй за мной»</a></h3>
             <img src="img/catalog-item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
             <span class="catalog-item-price">4 500 руб.</span>
-            <a class="button item-button" href='#'>В корзину</a>
-            <a class="compare-button" href='#'>Добавить к сравнению</a>
+            <a class="button item-button" href="#">В корзину</a>
+            <a class="compare-button" href="#">Добавить к сравнению</a>
           </li>
         </ul>
         <div class="catalog-nav">
