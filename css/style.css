@@ -1,9 +1,86 @@
-html,
-body {
-  height: 100%;
-  width: 100%;
+@font-face {
+  font-family: 'gilroyextrabold';
+  src: url('../fonts/gilroyextrabold.woff2') format('woff2'),
+      url('../fonts/gilroyextrabold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gilroylightr';
+  src: url('../fonts/gilroylight.woff2') format('woff2'),
+      url('../fonts/gilroylight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 body {
+  margin: 0;
+  padding: 0;
 
+  font-family: 'gilroyextrabold', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-header {
+  background-color: #f7e296;
+}
+
+.main-header-logo {
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.user-navigation,
+.header-services-list,
+.header-calalog-list {
+  list-style: none;
+}
+
+.user-navigation {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 300;
+}
+
+.header-services-list {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.header-calalog-list {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 300;
+
+  font-size: 15px;
+  line-height: 36px;
+}
+
+.main-footer {
+  background-color: #464646;
+  color: #ffffff;
+}
+
+.main-footer-logo {
+  font-size: 48px;
+  line-height: 48px;
+  color: #ffc600;
 }
