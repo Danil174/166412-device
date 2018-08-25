@@ -42,6 +42,8 @@ a {
   color: inherit;
 }
 
+/* header */
+
 .main-header {
   background-color: #f7e296;
 }
@@ -58,6 +60,56 @@ a {
 
 .main-header a:active {
   opacity: 0.3;
+}
+
+.main-navigation-search input {
+  border: none;
+  background-color: transparent;
+}
+
+.main-navigation-search input:focus {
+  outline: none;
+  border-bottom: 1px solid #000000;
+}
+
+input[type="search"]::placeholder {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 300;
+
+  color: #000000;
+  opacity: 0.3;
+}
+
+input[type="search"]:hover::placeholder {
+  opacity: 0.6;
+}
+
+input[type="search"]:focus::placeholder {
+  opacity: 1;
+}
+
+.search-button {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 300;
+
+  text-align: center;
+  color: #000000;
+  vertical-align: middle;
+  text-transform: capitalize;
+
+  background-color: transparent;
+  border: 1px solid #000000;
+
+  opacity: 0;
+}
+
+.search-button:hover {
+   color: #ffffff;
+   background-color: #000000;
+}
+
+.main-navigation-search input:focus ~ .search-button{
+  opacity: 1;
 }
 
 .user-navigation,
@@ -112,8 +164,10 @@ a {
   text-align: center;
   font-size: 18px;
   line-height: 8px;
-  background-color: #f0c52e;
   text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  background-color: #f0c52e;
 }
 
 .slider-product .button:hover {
@@ -144,22 +198,273 @@ a {
 
 .popular-poducts-list {
   list-style: none;
-
-  font-size: 18px;
-  line-height: 24px;
 }
 
 .popular-poducts-list li {
   width: 160px;
 }
 
-.popular-poducts-list img {
-  margin: 0 auto;
+.popular-poducts-list a {
+  display: block;
+  background-color: #f0c52e;
 }
+
+.popular-poducts-list a:hover {
+  background-color: #f0c52e;
+}
+
+.popular-poducts-list a:active img {
+  opacity: 0.3;
+}
+
+.popular-poducts-list h3 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* services */
+.services {
+  background-color: #e5e5e5;
+}
+.services .button {
+  width: 220px;
+  height: 8px;
+
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.2em;
+
+  background-color: #f0c52e;
+}
+
+.services .button:hover {
+
+}
+
+.services .button:active {
+  color: #f7e184;
+
+  background-color: #000000;
+}
+
+.services-list {
+  list-style: none;
+}
+
+.services-list h3 {
+  font-size: 47px;
+  line-height: 48px;
+}
+
+.services-list p {
+  color: #464646;
+}
+
+/* brends */
+
+.brends-list {
+  list-style: none;
+}
+
+.brends-list li {
+  cursor: pointer;
+}
+
+/* about */
+
+.about h2 {
+  font-size: 47px;
+  line-height: 48px;
+}
+
+.about p {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 300;
+}
+
+.about .transport-list {
+  list-style-type: circle;
+
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.about .button {
+  display: block;
+  height: 8px;
+
+  text-align: center;
+  font-size: 18px;
+  line-height: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  background-color: #f0c52e;
+}
+
+.about .button:hover {
+  height: 40px;
+  line-height: 40px;
+}
+
+.about .button:active {
+  height: 40px;
+  line-height: 40px;
+  opacity: 0.3;
+}
+
+/* contacts */
+
+.contacts h2 {
+  font-size: 47px;
+  line-height: 48px;
+}
+
+.contacts p {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 300;
+}
+
+.contacts .transport-list {
+  list-style-type: circle;
+
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.contacts .button {
+  display: block;
+  height: 8px;
+
+  text-align: center;
+  font-size: 18px;
+  line-height: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  background-color: #f0c52e;
+}
+
+.contacts .button:hover {
+  height: 40px;
+  line-height: 40px;
+}
+
+.contacts .button:active {
+  height: 40px;
+  line-height: 40px;
+  opacity: 0.3;
+}
+
+/* modal */
+.modal {
+  width: 960px;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.mail-form label {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.modal input,
+.modal textarea {
+  font-family: 'Open Sans', Arial, sans-serif;
+  background-color: rgba(230, 230, 230, 0.5);
+  border: none;
+}
+
+.modal input::placeholder,
+.modal textarea::placeholder {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 300;
+
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.modal input:hover,
+.modal textarea:hover {
+  background-color: rgba(230, 230, 230, 0.8);
+}
+
+.modal input:focus,
+.modal textarea:focus {
+  background-color: transparent;
+  border: 3px solid #f0c52e;
+  outline: none;
+}
+
+.modal input:focus::placeholder,
+.modal textarea:focus::placeholder {
+  color: rgba(70, 70, 70, 1);;
+}
+
+.modal input:invalid,
+.modal textarea:invalid {
+  background-color: rgba(237, 181, 181, 0.5);
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.modal .button {
+  text-align: center;
+  font-size: 18px;
+  line-height: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  background-color: #f0c52e;
+  border: none;
+}
+
+.modal .button:hover {
+  line-height: 40px;
+}
+
+.modal .button:active {
+  color: rgba(0, 0, 0, 0.3)
+}
+
+.modal-close-button {
+  width: 55px;
+  height: 55px;
+  background-image: url("../img/modal-close.svg");
+  background-color: transparent;
+  border: none;
+  font-size: 0px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.modal-close-button:focus,
+.modal-close-button:hover {
+  opacity: 1;
+  outline: none;
+}
+
+.modal-close-button:active {
+  opacity: 0.3;
+}
+
+/* footer */
 
 .main-footer {
   background-color: #464646;
   color: #ffffff;
+}
+
+.main-footer a:hover {
+  opacity: 0.6;
+}
+
+.main-footer a:active {
+  opacity: 0.3;
+}
+
+.footer-social-list,
+.footer-services-list,
+.footer-calalog-list {
+  list-style: none;
 }
 
 .main-footer-logo {
@@ -176,3 +481,44 @@ a {
 .main-footer-logo:active {
   opacity: 0.3;
 }
+
+.footer-phone,
+.footer-address {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 300;
+}
+
+.footer-services-list {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.footer-social-list li {
+  width: 32px;
+  height: 32px;
+}
+
+.footer-social-list a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background-image: url("../img/fb.svg");
+}
+
+.footer-social-list a:hover {
+  opacity: 0.6;
+}
+
+.footer-social-list a:active {
+  opacity: 0.1;
+}
+
+.footer-social-list a:nth-child(2) {
+  background-image: url("../img/instagram.svg");
+}
+
+.footer-social-list a:last-child {
+  background-image: url("../img/twitter.svg");
+}
+
