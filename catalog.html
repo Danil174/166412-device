@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="catalog">
   <header class="main-header">
     <a class="main-header-logo" href="index.html">DEVICE</a>
     <form class="main-navigation-search" action="https://echo.htmlacademy.ru" method="get">
@@ -88,17 +88,16 @@
         <fieldset>
           <legend>Стоимость</legend>
           <div class="custom-range">
-            <span class="price-range-background"></span>
             <span class="price-range"></span>
             <span class="icon-min-price">Минимальная цена</span>
-            <span class="icon--price">Максимальная цена</span>
+            <span class="icon-max-price">Максимальная цена</span>
             <input id="min-price" type="text" name="min-price" placeholder="от 0" value="0">
             <input id="max-price" type="text" name="max-price" placeholder="до 5000" value="5000">
           </div>
         </fieldset>
         <fieldset>
           <legend>Цвет</legend>
-          <ul>
+          <ul class="color-list">
             <li class="filter-option">
               <input type="checkbox" id="black" name="black" value="black" checked>
               <label for="black">Черный</label>
@@ -150,10 +149,10 @@
         <li class="sort-item">
           <a href="#">По популярности</a>
         </li>
-        <li class="sort-item">
+        <li class="sort-item arrow arrow-up">
           <a href="#">стрелка вверх</a>
         </li>
-        <li class="sort-item current">
+        <li class="sort-item current arrow arrow-down">
           <a href="#">стрелка вниз</a>
         </li>
       </ul>
@@ -208,7 +207,7 @@
             <a href="#">1</a>
           </li>
           <li class="pagination-item">
-            <a>2</a>
+            <a href="#">2</a>
           </li>
           <li class="pagination-item">
             <a href="#">3</a>
