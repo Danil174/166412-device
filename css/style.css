@@ -1,16 +1,16 @@
 @font-face {
-  font-family: 'gilroyextrabold';
+  font-family: 'Gilroy';
   src: url('../fonts/gilroyextrabold.woff2') format('woff2'),
       url('../fonts/gilroyextrabold.woff') format('woff');
-  font-weight: normal;
+  font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'gilroylightr';
+  font-family: 'Gilroy';
   src: url('../fonts/gilroylight.woff2') format('woff2'),
       url('../fonts/gilroylight.woff') format('woff');
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -29,7 +29,8 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: 'gilroyextrabold', Arial, sans-serif;
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-weight: 900;
   font-size: 15px;
   line-height: 30px;
   letter-spacing: 0.01em;
@@ -194,7 +195,7 @@ input[type="search"]:focus::placeholder {
 .product-properties tr:last-child {
   font-size: 35px;
   line-height: 48px;
-  font-family: 'gilroylightr', Arial, sans-serif;
+  font-weight: 300;
 }
 
 .product-properties tr:first-child {
@@ -891,10 +892,46 @@ body {
   margin: -164px auto 0;
 }
 
+.slider-product {
+  display: flex;
+  justify-content: space-between;
+}
+
 .promo-products .slider-column:first-child {
   width: 400px;
 }
 
 .promo-products .slider-column:last-child{
   width: 480px;
+}
+
+.popular-products {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.popular-poducts-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.popular-product-link {
+  display: flex;
+  flex-direction: column;
+}
+
+.popular-product-link .img-wrapper {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popular-poducts-list h3 {
+  order: 1;
 } */
