@@ -271,6 +271,8 @@ input[type="search"]:focus::placeholder {
 }
 
 .services-list p {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 300;
   color: #464646;
 }
 
@@ -830,7 +832,7 @@ input[type="search"]:focus::placeholder {
 }
 
 /* сетки */
-/* html,
+html,
 body {
   min-width: 1440px;
   min-height: 2795px;
@@ -871,7 +873,6 @@ body {
 
 .user-navigation {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   width: 500px;
   margin: 0;
@@ -880,7 +881,6 @@ body {
 
 .header-services-list {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   width: 1040px;
   margin: 0;
@@ -889,7 +889,7 @@ body {
 
 .promo-products {
   width: 1000px;
-  margin: -164px auto 0;
+  margin: 45px auto 0;
 }
 
 .slider-product {
@@ -897,23 +897,23 @@ body {
   justify-content: space-between;
 }
 
-.promo-products .slider-column:first-child {
+.promo-products .picture-container {
   width: 400px;
 }
 
-.promo-products .slider-column:last-child{
-  width: 480px;
+.promo-products .info-container {
+  width: 485px;
 }
 
 .popular-products {
   width: 1160px;
-  margin: 0 auto;
+  margin: 100px auto 0;
 }
 
 .popular-poducts-list {
   list-style: none;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   justify-content: space-between;
   margin: 0;
   padding: 0;
@@ -934,4 +934,81 @@ body {
 
 .popular-poducts-list h3 {
   order: 1;
-} */
+}
+
+.services-wrapper {
+  width: 1160px;
+  margin: 180px auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.services-wrapper .slider-controls {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.services-wrapper .services-list {
+  position: relative;
+  width: 720px;
+  padding: 0;
+  margin: 0;
+}
+
+.services img {
+  position: absolute;
+}
+
+.brends .brends-list {
+  display: flex;
+  justify-content: space-between;
+  width: 1160px;
+  margin: 130px auto 0;
+  padding: 0px;
+}
+
+.about-wrapper {
+  width: 1160px;
+  margin: 90px auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about {
+  width: 460px;
+}
+
+.contacts {
+  width: 560px;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  width: 1160px;
+  margin: 0 auto;
+  padding: 65px 0px;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-services-list {
+  display: flex;
+  justify-content: space-around;
+  width: 440px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: space-around;
+  width: 160px;
+  margin: auto;
+  padding: 0;
+}
