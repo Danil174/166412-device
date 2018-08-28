@@ -794,6 +794,8 @@ input[type="search"]:focus::placeholder {
 .footer-services-list {
   font-size: 18px;
   line-height: 24px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 .footer-social-list li {
@@ -838,10 +840,11 @@ body {
   min-height: 2795px;
 }
 
-body {
+body:not(.catalog) {
   background-image: url("../img/device-index.jpg");
   background-size: 1440px 2795px;
   background-repeat: no-repeat;
+  background-position: top center;
 }
 
 .main-header {
@@ -913,7 +916,6 @@ body {
 .popular-poducts-list {
   list-style: none;
   display: flex;
-  /* flex-direction: row; */
   justify-content: space-between;
   margin: 0;
   padding: 0;
@@ -984,6 +986,10 @@ body {
   width: 560px;
 }
 
+.main-footer {
+  margin-top: 100px;
+}
+
 .footer-container {
   display: flex;
   flex-direction: column;
@@ -1011,4 +1017,27 @@ body {
   width: 160px;
   margin: auto;
   padding: 0;
+}
+
+.catalog header {
+  margin-bottom: 50px;
+  padding-bottom: 60px;
+}
+
+.catalog  h1 {
+  width: 1040px;
+  margin: 0 auto 35px;
+}
+
+
+.breadcrumbs {
+  display: flex;
+  width: 1040px;
+  margin: 0 auto 50px;
+  padding: 0;
+}
+
+
+.filter {
+  width: 200px;
 }

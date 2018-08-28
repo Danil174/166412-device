@@ -11,31 +11,35 @@
 
 <body class="catalog">
   <header class="main-header">
-    <a class="main-header-logo" href="index.html">DEVICE</a>
-    <form class="main-navigation-search" action="https://echo.htmlacademy.ru" method="get">
-      <label class="visually-hidden" for="main-search">Поиск по сайту</label>
-      <input id="main-search" type="search" name="main-search" placeholder="Поиск по сайту">
-      <button class="search-button" type="submit">поиск</button>
-    </form>
-    <nav class="main-navigation">
-      <ul class="user-navigation">
-        <li class="navigation-item user">
-          <a href="#">Валентин Петухов</a>
-        </li>
-        <li class="navigation-item logout">
-          <a href="#">Выйти</a>
-        </li>
-        <li class="navigation-item compare">
-          <a href="#">Сравнить</a>
-        </li>
-        <li class="navigation-item cart">
-          <a href="#">Корзина</a>
-        </li>
-      </ul>
+    <div class="header-wrapper">
+      <a class="main-header-logo">DEVICE</a>
+      <div class="navigation-wrapper">
+        <form class="main-navigation-search" action="https://echo.htmlacademy.ru" method="get">
+          <label class="visually-hidden" for="main-search">Поиск по сайту</label>
+          <input id="main-search" type="search" name="main-search" placeholder="Поиск по сайту">
+          <button class="search-button" type="submit">найти</button>
+        </form>
+        <nav class="main-navigation">
+          <ul class="user-navigation">
+            <li class="navigation-item user">
+              <a href="#">Валентин Петухов</a>
+            </li>
+            <li class="navigation-item logout">
+              <a href="#">Выйти</a>
+            </li>
+            <li class="navigation-item compare">
+              <a href="#">Сравнить</a>
+            </li>
+            <li class="navigation-item cart">
+              <a href="#">Корзина</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <ul class="header-services-list">
         <li class="services-item">
           <a href="products.html">Каталог товаров</a>
-          <ul class="header-calalog-list">
+          <ul class="header-calalog-list visually-hidden">
             <li class="catalog-item">
               <a href="#">Виртуальная реальность</a>
             </li>
@@ -46,7 +50,7 @@
               <a href="#">Квадрокоптеры</a>
             </li>
             <li class="catalog-item">
-              <a>Моноподы для селфи</a>
+              <a href="catalog.html">Моноподы для селфи</a>
             </li>
             <li class="catalog-item">
               <a href="#">Умные часы</a>
@@ -66,7 +70,7 @@
           <a href="contacts.html">Контакты</a>
         </li>
       </ul>
-    </nav>
+    </div>
   </header>
 
   <main>
@@ -221,59 +225,61 @@
   </main>
 
   <footer class="main-footer">
-    <div class="footer-wrapper">
-      <a class="main-footer-logo" href="index.html">DEVICE</a>
-      <ul class="user-navigation">
-        <li class="navigation-item user">
-          <a href="#">Валентин Петухов</a>
-        </li>
-        <li class="navigation-item logout">
-          <a href="#">Выйти</a>
-        </li>
-        <li class="navigation-item compare">
-          <a href="#">Сравнить</a>
-        </li>
-        <li class="navigation-item cart">
-          <a href="#">Корзина</a>
-        </li>
-      </ul>
-    </div>
-    <div class="footer-wrapper">
-      <span class="footer-address">г. Москва, ул. Строителей, 15</span>
-      <ul class="footer-services-list">
-        <li class="services-item">
-          <a href="delivery.html">Доставка</a>
-        </li>
-        <li class="services-item">
-          <a href="assurance.html">Гарантия</a>
-        </li>
-        <li class="services-item">
-          <a href="contacts.html">Контакты</a>
-        </li>
-      </ul>
-      <span class="footer-phone">Тел.: +7 (495) 495-95-95</span>
-    </div>
-    <div class="footer-wrapper">
-      <ul class="footer-social-list">
-        <li class="social-item">
-          <a class="social-link" href="#">
-            <span class="visually-hidden">Фейсбук</span>
-          </a>
-        </li>
-        <li class="social-item">
-          <a class="social-link" href="#">
-            <span class="visually-hidden">Инстаграм</span>
-          </a>
-        </li>
-        <li class="social-item">
-          <a class="social-link" href="#">
-            <span class="visually-hidden">Твиттер</span>
-          </a>
-        </li>
-      </ul>
-      <a class="developer-logo" href="https://htmlacademy.ru/intensive/htmlcss">
-        <img src="img/developer.svg" width="27" height="35" alt="Сделано в HTML Academy">
-      </a>
+    <div class="footer-container">
+      <div class="footer-wrapper">
+        <a class="main-footer-logo">DEVICE</a>
+        <ul class="user-navigation">
+          <li class="navigation-item user">
+            <a href="#">Валентин Петухов</a>
+          </li>
+          <li class="navigation-item logout">
+            <a href="#">Выйти</a>
+          </li>
+          <li class="navigation-item compare">
+            <a href="#">Сравнить</a>
+          </li>
+          <li class="navigation-item cart">
+            <a href="#">Корзина</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-wrapper">
+        <span class="footer-address">г. Москва, ул. Строителей, 15</span>
+        <ul class="footer-services-list">
+          <li class="services-item">
+            <a href="delivery.html">Доставка</a>
+          </li>
+          <li class="services-item">
+            <a href="assurance.html">Гарантия</a>
+          </li>
+          <li class="services-item">
+            <a href="contacts.html">Контакты</a>
+          </li>
+        </ul>
+        <span class="footer-phone">Тел.: +7 (495) 495-95-95</span>
+      </div>
+      <div class="footer-wrapper">
+        <ul class="footer-social-list">
+          <li class="social-item">
+            <a class="social-link" href="#">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social-link" href="#">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social-link" href="#">
+              <span class="visually-hidden">Твиттер</span>
+            </a>
+          </li>
+        </ul>
+        <a class="developer-logo" href="https://htmlacademy.ru/intensive/htmlcss">
+          <img src="img/developer.svg" width="27" height="35" alt="Сделано в HTML Academy">
+        </a>
+      </div>
     </div>
   </footer>
 </body>
