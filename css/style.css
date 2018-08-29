@@ -33,7 +33,7 @@ body {
   font-weight: 900;
   font-size: 15px;
   line-height: 30px;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.014em;
   color: #000;
 
   background-color: #ffffff;
@@ -855,13 +855,17 @@ body:not(.catalog) {
 }
 
 .header-wrapper {
+  position: relative;
   width: 1040px;
+  min-height: 260px;
   margin: 0px auto;
+  padding-top: 50px;
 }
 
 .main-header-logo {
-  margin-top: -24px;
-  margin-bottom: 20px;
+  position: absolute;
+  top: -25px;
+  left: -3px;
 }
 
 .navigation-wrapper {
@@ -892,7 +896,7 @@ body:not(.catalog) {
 
 .promo-products {
   width: 1000px;
-  margin: 45px auto 0;
+  margin: 0px auto 100px;
 }
 
 .slider-product {
@@ -902,15 +906,23 @@ body:not(.catalog) {
 
 .promo-products .picture-container {
   width: 400px;
+  margin-top: -120px;
 }
 
 .promo-products .info-container {
+  position: relative;
   width: 485px;
+}
+
+.product-number {
+  position: absolute;
+  top: -137px;
+  right: -29px;
 }
 
 .popular-products {
   width: 1160px;
-  margin: 100px auto 0;
+  margin: 100px auto;
 }
 
 .popular-poducts-list {
@@ -961,6 +973,8 @@ body:not(.catalog) {
 
 .services img {
   position: absolute;
+  right: 65px;
+  top: -23px;
 }
 
 .brends .brends-list {
