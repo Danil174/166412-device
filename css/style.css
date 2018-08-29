@@ -26,6 +26,8 @@
 }
 
 body {
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
 
@@ -504,6 +506,7 @@ input[type="search"]:focus::placeholder {
 
 /* filter */
 
+.visual-h2,
 .filter h2 {
   font-size: 16px;
   line-height: 24px;
@@ -847,6 +850,13 @@ body:not(.catalog) {
   background-position: top center;
 }
 
+body.catalog {
+  background-image: url("../img/catalog.jpg");
+  background-size: 1440px 2015px;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
 .main-header {
   display: flex;
   flex-direction: column;
@@ -1034,24 +1044,102 @@ body:not(.catalog) {
 }
 
 .catalog header {
-  margin-bottom: 50px;
-  padding-bottom: 60px;
+  margin-bottom: 38px;
+}
+
+.catalog .header-wrapper {
+  min-height: 135px;
 }
 
 .catalog  h1 {
   width: 1040px;
-  margin: 0 auto 35px;
+  margin: 0 auto 24px;
 }
 
 
 .breadcrumbs {
   display: flex;
   width: 1040px;
-  margin: 0 auto 50px;
+  margin: 0 auto 46px;
   padding: 0;
 }
 
+.sort-wrapper {
+  width: 100%;
+  background: linear-gradient(to right,#e2e2e2 0%,#e2e2e2 49%,#f2f2f2 50%,#f2f2f2 100%);
+}
+
+.sort-inner-wrapper {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.visual-h2 {
+  width: 268px;
+  margin-left: 60px;
+  padding: 23px 0px;
+  background-color: #e2e2e2;
+}
+
+.sort {
+  display: flex;
+  width: 832px;
+  padding: 23px 0px;
+  background-color: #f2f2f2;
+}
+
+.sort h2 {
+  margin: 0px;
+  margin-left: 73px;
+}
+
+.sort-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.background-wrapper {
+  width: 100%;
+  background: linear-gradient(to right,#efefef 0%,#efefef 25%,#ffffff 30%,#ffffff 100%);
+}
+
+.filter-catalog-container {
+  display: flex;
+  width: 1100px;
+  margin: 0 auto;
+}
 
 .filter {
-  width: 200px;
+  width: 298px;
+  background-color: #efefef;
+}
+
+.catalog {
+  width: 760px;
+  margin-left: auto;
+}
+
+.catalog-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-list li {
+  width: 360px;
+}
+
+.catalog-nav {
+  margin-top: 110px;
+}
+
+.pagination-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 23px 125px;
 }
