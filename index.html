@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header class="main-header">
+  <header class="main-header container">
     <div class="header-wrapper">
       <a class="main-header-logo">DEVICE</a>
       <div class="navigation-wrapper">
@@ -72,7 +72,7 @@
 
   <main>
     <h1 class="visually-hidden">Магазин гаджетов Device</h1>
-    <section class="promo-products slider">
+    <section class="promo-products slider container">
       <h2 class="visually-hidden">Лучшие товары</h2>
       <input class="visually-hidden" type="radio" id="slider-btn-1" name="promo" checked>
       <input class="visually-hidden" type="radio" id="slider-btn-2" name="promo">
@@ -91,14 +91,14 @@
           <span class="product-number">01</span>
           <b class="product-motto">Делай селфи,<br> как Бен Стиллер!</b>
           <p class="product-info">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-          <a class="button" href="#">Подробнее</a>
+          <a class="button device-button" href="#">Подробнее</a>
           <table class="product-properties">
-            <tr>
+            <tr class="product-properties-names">
               <td>Длина палки</td>
               <td>Вес палки</td>
               <td>Материал</td>
             </tr>
-            <tr>
+            <tr class="product-properties-value">
               <td>8,5 м</td>
               <td>5 кг</td>
               <td>Карбон</td>
@@ -141,10 +141,10 @@
         </table>
       </div>
     </section>
-    <section class="popular-products">
+    <section class="popular-products container">
       <h2 class="visually-hidden">Популярные товары</h2>
       <ul class="popular-poducts-list">
-        <li class="popular-product">
+        <li class="popular-product vr">
           <a class="popular-product-link" href="#">
             <h3 class="product-name">Виртуальная реальность</h3>
             <div class="img-wrapper">
@@ -152,7 +152,7 @@
             </div>
           </a>
         </li>
-        <li class="popular-product">
+        <li class="popular-product monopod">
           <a class="popular-product-link" href="#">
             <h3 class="product-name">Моноподы для селфи</h3>
             <div class="img-wrapper">
@@ -160,7 +160,7 @@
             </div>
           </a>
         </li>
-        <li class="popular-product">
+        <li class="popular-product action-camera">
           <a class="popular-product-link" href="#">
             <h3 class="product-name">Экшн-камеры</h3>
             <div class="img-wrapper">
@@ -168,7 +168,7 @@
             </div>
           </a>
         </li>
-        <li class="popular-product">
+        <li class="popular-product band">
           <a class="popular-product-link" href="#">
             <h3 class="product-name">Фитнес-браслеты</h3>
             <div class="img-wrapper">
@@ -176,7 +176,7 @@
             </div>
           </a>
         </li>
-        <li class="popular-product">
+        <li class="popular-product clock">
           <a class="popular-product-link" href="#">
             <h3 class="product-name">Умные часы</h3>
             <div class="img-wrapper">
@@ -184,7 +184,7 @@
             </div>
           </a>
         </li>
-        <li class="popular-product">
+        <li class="popular-product quadrocopter">
           <a class="popular-product-link" href="#">
             <h3 class="product-name">Квадрокоптеры</h3>
             <div class="img-wrapper">
@@ -195,15 +195,15 @@
       </ul>
     </section>
     <section class="services">
-      <div class="services-wrapper">
+      <div class="services-wrapper container">
         <h2 class="visually-hidden">Услуги</h2>
         <input class="visually-hidden" type="radio" id="btn-1" name="toggle" checked>
         <input class="visually-hidden" type="radio" id="btn-2" name="toggle">
         <input class="visually-hidden" type="radio" id="btn-3" name="toggle">
         <div class="slider-controls">
-          <label class="button" for="btn-1">Доставка</label>
-          <label class="button" for="btn-2">Гарантия</label>
-          <label class="button" for="btn-3">Кредит</label>
+          <label class="button device-button" for="btn-1">Доставка</label>
+          <label class="button device-button" for="btn-2">Гарантия</label>
+          <label class="button device-button" for="btn-3">Кредит</label>
         </div>
         <ul class="services-list">
           <li class="services-item">
@@ -228,20 +228,24 @@
         </ul>
       </div>
     </section>
-    <section class="brends">
+    <section class="brends container">
       <h2 class="visually-hidden">Наши бренды</h2>
       <ul class="brends-list">
         <li class="brend-item">
-          <img src="img/logo-1-hov.jpg" width="260" height="100" alt="DJI">
+          <img src="img/logo-1.jpg" width="260" height="100" alt="DJI">
+          <img class="hover-img" src="img/logo-1-hov.jpg" width="260" height="100" alt="DJI">
         </li>
         <li class="brend-item">
-          <img src="img/logo-2-hov.jpg" width="260" height="100" alt="SP GADGETS">
+          <img src="img/logo-2.jpg" width="260" height="100" alt="SP GADGETS">
+          <img class="hover-img" src="img/logo-2-hov.jpg" width="260" height="100" alt="SP GADGETS">
         </li>
         <li class="brend-item">
-          <img src="img/logo-3-hov.jpg" width="260" height="100" alt="GoPro">
+          <img src="img/logo-3.jpg" width="260" height="100" alt="SP GADGETS">
+          <img class="hover-img" src="img/logo-3-hov.jpg" width="260" height="100" alt="GoPro">
         </li>
         <li class="brend-item">
-          <img src="img/logo-4-hov.jpg" width="260" height="100" alt="VIVE">
+          <img src="img/logo-4.jpg" width="260" height="100" alt="SP GADGETS">
+          <img class="hover-img" src="img/logo-4-hov.jpg" width="260" height="100" alt="VIVE">
         </li>
       </ul>
     </section>
