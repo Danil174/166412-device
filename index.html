@@ -264,12 +264,14 @@
       <section class="contacts">
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <img src="img/map.jpg" class="map" width="560" height="222" alt="карта проезда">
-        <a href="#" class="button">Напишите нам</a>
+        <a class="map-link" href="https://yandex.ru/maps/-/CBB4AERqHA">
+          <img src="img/map.jpg" class="map" width="560" height="222" alt="карта проезда">
+        </a>
+        <a href="#" class="button mail-btn">Напишите нам</a>
       </section>
     </div>
 
-    <section class="modal modal-login visually-hidden">
+    <section class="modal modal-mailUs">
       <h2 class="visually-hidden">Форма авторизации</h2>
 
       <form class="mail-form" action="https://echo.htmlacademy.ru" method="post">
@@ -291,9 +293,12 @@
       <button class="modal-close-button" type="button">закрыть</button>
     </section>
 
-    <section class="modal modal-map visually-hidden">
+    <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <img src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу г. Москва, ул. Строителей, 15">
+      <iframe src="https://yandex.ru/map-widget/v1/-/CBB4A6BfcA" width="960" height="559" frameborder="0" allowfullscreen="false"></iframe>
+      <p>
+        <img src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу г. Москва, ул. Строителей, 15">
+      </p>
       <button class="modal-close-button" type="button">закрыть</button>
     </section>
   </main>
