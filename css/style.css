@@ -1235,11 +1235,6 @@ input[type="search"]:focus::placeholder {
   background-color: #efefef;
 }
 
-.catalog {
-  width: 760px;
-  margin-left: auto;
-}
-
 .catalog-list {
   display: flex;
   justify-content: space-between;
