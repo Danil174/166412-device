@@ -201,31 +201,33 @@
         <input class="visually-hidden" type="radio" id="btn-2" name="toggle">
         <input class="visually-hidden" type="radio" id="btn-3" name="toggle">
         <div class="slider-controls">
-          <label class="button device-button" for="btn-1">Доставка</label>
-          <label class="button device-button" for="btn-2">Гарантия</label>
-          <label class="button device-button" for="btn-3">Кредит</label>
+          <label class="button device-button current" for="btn-1" name="delivery">Доставка</label>
+          <label class="button device-button" for="btn-2" name="warranty">Гарантия</label>
+          <label class="button device-button" for="btn-3" name="credit">Кредит</label>
         </div>
-        <ul class="services-list">
-          <li class="services-item">
-            <h3>Доставка</h3>
-            <img src="img/delivery.svg" width="136" height="164" alt="Доставка">
-            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,
-              поднимая его на ваш этаж.</p>
-          </li>
-          <li class="services-item visually-hidden">
-            <h3>Гарантия</h3>
-            <img src="img/warranty.svg" width="171" height="194" alt="Гарантия">
-            <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не
-              дом, конечно же.
-            </p>
-          </li>
-          <li class="services-item visually-hidden">
-            <h3>Кредит</h3>
-            <img src="img/credit.svg" width="156" height="186" alt="Кредит">
-            <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита.
-              Выгодные для нашего банка, разумеется.</p>
-          </li>
-        </ul>
+        <div id="services-control" class="delivery">
+          <ul class="services-list">
+            <li class="services-item services-item-delivery">
+              <h3>Доставка</h3>
+              <img src="img/delivery.svg" width="136" height="164" alt="Доставка">
+              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,
+                поднимая его на ваш этаж.</p>
+            </li>
+            <li class="services-item services-item-warranty">
+              <h3>Гарантия</h3>
+              <img src="img/warranty.svg" width="171" height="194" alt="Гарантия">
+              <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не
+                дом, конечно же.
+              </p>
+            </li>
+            <li class="services-item services-item-credit">
+              <h3>Кредит</h3>
+              <img src="img/credit.svg" width="156" height="186" alt="Кредит">
+              <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита.
+                Выгодные для нашего банка, разумеется.</p>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
     <section class="brends container">

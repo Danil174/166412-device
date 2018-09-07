@@ -1095,10 +1095,12 @@ input[type="search"]:focus::placeholder {
   margin-top: 80px;
 }
 
+.services-wrapper .device-button.current,
 .services-wrapper .device-button:active {
   color: #f7e184;
 }
 
+.services-wrapper .device-button.current::before,
 .services-wrapper .device-button:active::before {
   height: 100%;
   top: 0px;
@@ -1121,6 +1123,22 @@ input[type="search"]:focus::placeholder {
   width: 760px;
   padding: 0;
   margin: 0;
+}
+
+.services-item {
+  display: none;
+}
+
+.delivery .services-item-delivery {
+  display: inline-block;
+}
+
+.warranty .services-item-warranty {
+  display: inline-block;
+}
+
+.credit .services-item-credit {
+  display: inline-block;
 }
 
 .services-list h3 {

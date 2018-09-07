@@ -2,6 +2,8 @@
 
 var mapBtn = document.querySelector(".map-link");
 var closeBtns = document.querySelectorAll(".modal-close-button");
+var servicesBtns = document.querySelectorAll(".services .device-button");
+var servicesControl = document.querySelector("#services-control");
 var modalMap = document.querySelector(".modal-map");
 var mailBtn = document.querySelector(".mail-btn");
 var modalMail = document.querySelector(".modal-mailUs");
@@ -15,6 +17,30 @@ mapBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
   modalMap.classList.add("modal-show");
 });
+
+//services
+
+var servicesBtnsArr = [],
+  length = servicesBtns.length;
+
+for (var i = 0; i < length; i++) {
+  servicesBtnsArr.push(servicesBtns[i]);
+}
+
+servicesBtnsArr.forEach(function (serviceBtn) {
+  return serviceBtn.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    servicesBtnsArr.forEach(function (serviceBtn) {
+      serviceBtn.classList.remove("current");
+    });
+    var currentName = this.getAttribute("name");
+    this.classList.add("current");
+    var newName = servicesControl.className;
+    servicesControl.classList.remove(newName);
+    servicesControl.classList.add(currentName);
+  });
+});
+//close btns
 
 // не для ie
 // var closeBtns = Array.from(document.querySelectorAll(".modal-close-button"));
