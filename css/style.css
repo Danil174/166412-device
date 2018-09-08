@@ -984,6 +984,7 @@ input[type="search"]:focus::placeholder {
 
 .promo-products {
   position: relative;
+  min-height: 496px;
   background: linear-gradient(to bottom,#f7e296 0%,#f7e296 114px,rgba(255, 255, 255, 0) 114px,rgba(255, 255, 255, 0) 100%);
 }
 
@@ -991,7 +992,7 @@ input[type="search"]:focus::placeholder {
   position: absolute;
   width: auto;
   height: 12px;
-  top: 321px;
+  top: 330px;
   right: 83px;
   font-size: 0px;
   z-index: 1;
@@ -999,8 +1000,6 @@ input[type="search"]:focus::placeholder {
 
 .promo-button {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
   width: 12px;
   height: 12px;
   background: transparent;
