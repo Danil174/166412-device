@@ -741,13 +741,12 @@ input[type="search"]:focus::placeholder {
   display: none;
   position: absolute;
   width: 100%;
-  height: 100%;
   left: 0;
-  top: 0;
+  top: 172px;
 }
 
 .catalog-item:hover .hover-wrapper {
-  display: block;
+  display: flex;
 }
 
 .catalog-list .catalog-item-price {
@@ -1426,6 +1425,10 @@ input[type="search"]:focus::placeholder {
   margin-top: 70px;
 }
 
+.catalog-list .catalog-item:nth-child(2n) {
+  margin-left: 40px;
+}
+
 .catalog-list img {
   margin-bottom: 35px;
 }
@@ -1440,9 +1443,15 @@ input[type="search"]:focus::placeholder {
   margin: 0;
 }
 
+.catalog-list .hover-wrapper {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-.catalog-list li:nth-child(2n) {
-  margin-left: 40px;
+.catalog-list .device-button {
+  width: 200px;
+  z-index: 1;
 }
 
 .catalog-nav {
