@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="catalog">
+<body class="catalogPage">
   <header class="main-header container">
     <div class="header-wrapper">
       <a class="main-header-logo">DEVICE</a>
@@ -74,21 +74,23 @@
   </header>
 
   <main>
-    <h1>Моноподы для селфи</h1>
-    <ul class="breadcrumbs">
-      <li>
-        <a href="index.html">Главная</a>
-      </li>
-      <li>
-        <a href="#">Каталог товаров</a>
-      </li>
-      <li class="breadcrumbs-current">
-        <a>Моноподы для селфи</a>
-      </li>
-    </ul>
+    <div class="container">
+      <h1>Моноподы для селфи</h1>
+      <ul class="breadcrumbs">
+        <li>
+          <a href="index.html">Главная</a>
+        </li>
+        <li>
+          <a href="#">Каталог товаров</a>
+        </li>
+        <li class="breadcrumbs-current">
+          <a>Моноподы для селфи</a>
+        </li>
+      </ul>
+    </div>
 
     <div class="sort-wrapper">
-      <div class="sort-inner-wrapper">
+      <div class="sort-inner-wrapper container">
         <div class="visual-h2">Фильтр:</div>
         <section class="sort">
           <h2>Cортировка:</h2>
@@ -114,7 +116,7 @@
     </div>
 
     <div class="background-wrapper">
-      <div class="filter-catalog-container">
+      <div class="filter-catalog-container container">
         <section class="filter">
           <h2 class="visually-hidden">Фильтр:</h2>
           <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
@@ -179,17 +181,21 @@
               </h3>
               <img src="img/catalog-item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
               <span class="catalog-item-price">500 руб.</span>
-              <a class="button item-button" href="#">В корзину</a>
-              <a class="compare-button" href="#">Добавить к сравнению</a>
+              <div class="hover-wrapper">
+                <a class="button device-button" href="#">В корзину</a>
+                <a class="compare-button" href="#">Добавить к сравнению</a>
+              </div>
             </li>
             <li class="catalog-item">
               <h3>
-                <a href="catalog-item.html">Профессиональная селфи-палка</a>
+                <a href="catalog-item.html">Профессиональная <br> селфи-палка</a>
               </h3>
               <img src="img/catalog-item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
               <span class="catalog-item-price">1 500 руб.</span>
-              <a class="button item-button" href="#">В корзину</a>
-              <a class="compare-button" href="#">Добавить к сравнению</a>
+              <div class="hover-wrapper">
+                <a class="button device-button" href="#">В корзину</a>
+                <a class="compare-button" href="#">Добавить к сравнению</a>
+              </div>
             </li>
             <li class="catalog-item">
               <h3>
@@ -197,8 +203,10 @@
               </h3>
               <img src="img/catalog-item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
               <span class="catalog-item-price">2 500 руб.</span>
-              <a class="button item-button" href="#">В корзину</a>
-              <a class="compare-button" href="#">Добавить к сравнению</a>
+              <div class="hover-wrapper">
+                <a class="button device-button" href="#">В корзину</a>
+                <a class="compare-button" href="#">Добавить к сравнению</a>
+              </div>
             </li>
             <li class="catalog-item">
               <h3>
@@ -206,8 +214,10 @@
               </h3>
               <img src="img/catalog-item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
               <span class="catalog-item-price">4 500 руб.</span>
-              <a class="button item-button" href="#">В корзину</a>
-              <a class="compare-button" href="#">Добавить к сравнению</a>
+              <div class="hover-wrapper">
+                <a class="button device-button" href="#">В корзину</a>
+                <a class="compare-button" href="#">Добавить к сравнению</a>
+              </div>
             </li>
           </ul>
           <div class="catalog-nav">
