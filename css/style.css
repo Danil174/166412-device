@@ -335,30 +335,6 @@ input[type="search"]:focus::placeholder {
   letter-spacing: 0em;
 }
 
-.about .button {
-  display: block;
-  height: 8px;
-
-  text-align: center;
-  font-size: 18px;
-  line-height: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-
-  background-color: #f0c52e;
-}
-
-.about .button:hover {
-  height: 40px;
-  line-height: 40px;
-}
-
-.about .button:active {
-  height: 40px;
-  line-height: 40px;
-  opacity: 0.3;
-}
-
 /* contacts */
 
 .contacts h2 {
@@ -378,30 +354,6 @@ input[type="search"]:focus::placeholder {
   line-height: 40px;
 }
 
-.contacts .button {
-  display: block;
-  height: 8px;
-
-  text-align: center;
-  font-size: 18px;
-  line-height: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-
-  background-color: #f0c52e;
-}
-
-.contacts .button:hover {
-  height: 40px;
-  line-height: 40px;
-}
-
-.contacts .button:active {
-  height: 40px;
-  line-height: 40px;
-  opacity: 0.3;
-}
-
 /* modal */
 .modal {
   display: none;
@@ -412,6 +364,7 @@ input[type="search"]:focus::placeholder {
   transform: translate(-50%, -50%);
   background-color: #ffffff;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .modal-show {
@@ -435,6 +388,10 @@ input[type="search"]:focus::placeholder {
     to {
         transform:translate(-50%,-50%);
     }
+}
+
+.modal-mailUs {
+  padding: 90px 100px;
 }
 
 .mail-form label {
@@ -478,25 +435,6 @@ input[type="search"]:focus::placeholder {
 .modal textarea:invalid {
   background-color: rgba(237, 181, 181, 0.5);
   color: rgba(70, 70, 70, 0.4);
-}
-
-.modal .button {
-  text-align: center;
-  font-size: 18px;
-  line-height: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-
-  background-color: #f0c52e;
-  border: none;
-}
-
-.modal .button:hover {
-  line-height: 40px;
-}
-
-.modal .button:active {
-  color: rgba(0, 0, 0, 0.3)
 }
 
 .modal-close-button {
