@@ -170,6 +170,7 @@ input[type="search"]:focus::placeholder {
 }
 
 .device-button {
+  font: inherit;
   position: relative;
   display: inline-block;
   width: 210px;
@@ -181,6 +182,11 @@ input[type="search"]:focus::placeholder {
   line-height: 22px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+  color: inherit;
+  box-sizing: content-box;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .device-button::before {
@@ -195,6 +201,11 @@ input[type="search"]:focus::placeholder {
     transition: all .2s ease-in-out;
 }
 
+.device-button:focus {
+  outline: none;
+}
+
+.device-button:focus::before,
 .device-button:hover::before {
   top: 0;
   height: 100%;
@@ -924,12 +935,62 @@ input[type="search"]:focus::placeholder {
 }
 
 .promo-products {
+  position: relative;
   background: linear-gradient(to bottom,#f7e296 0%,#f7e296 114px,rgba(255, 255, 255, 0) 114px,rgba(255, 255, 255, 0) 100%);
 }
 
+.promo-products .slider-controls {
+  position: absolute;
+  width: auto;
+  height: 12px;
+  top: 321px;
+  right: 83px;
+  font-size: 0px;
+  z-index: 1;
+}
+
+.promo-button {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+  background: transparent;
+  border: 1px solid #000;
+  margin-left: 21px;
+  padding: 0px;
+  font: inherit;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.promo-button.current::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  top: 3px;
+  left: 3px;
+  background: transparent;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
 .slider-product {
-  display: flex;
+  display: none;
   justify-content: space-between;
+}
+
+.slide-1 .slider-product-1 {
+  display: flex;
+}
+
+.slide-2 .slider-product-2 {
+  display: flex;
+}
+
+.slide-3 .slider-product-3 {
+  display: flex;
 }
 
 .promo-products .picture-container {
@@ -1079,9 +1140,6 @@ input[type="search"]:focus::placeholder {
 
 .services-wrapper .slider-controls {
   position: relative;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-around; */
   width: 300px;
 }
 
@@ -1098,6 +1156,18 @@ input[type="search"]:focus::placeholder {
 .services-wrapper .device-button.current,
 .services-wrapper .device-button:active {
   color: #f7e184;
+}
+
+.services-wrapper .device-button.current:focus {
+  outline: none;
+}
+
+.services-wrapper .device-button.current:focus::before {
+  box-shadow: -3px 0px 0px 0px #f0c52e,
+              -3px -3px 0px 0px #f0c52e,
+              -3px 3px 0px 0px #f0c52e,
+              0px -3px 0px 0px #f0c52e,
+              0px 3px 0px 0px #f0c52e;
 }
 
 .services-wrapper .device-button.current::before,

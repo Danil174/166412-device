@@ -4,6 +4,8 @@ var mapBtn = document.querySelector(".map-link");
 var closeBtns = document.querySelectorAll(".modal-close-button");
 var servicesBtns = document.querySelectorAll(".services .device-button");
 var servicesControl = document.querySelector("#services-control");
+var promoControl = document.querySelector("#promo-slider");
+var promoBtns = document.querySelectorAll(".promo-products .promo-button");
 var modalMap = document.querySelector(".modal-map");
 var mailBtn = document.querySelector(".mail-btn");
 var modalMail = document.querySelector(".modal-mailUs");
@@ -16,6 +18,28 @@ mailBtn.addEventListener("click", function (evt) {
 mapBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
   modalMap.classList.add("modal-show");
+});
+
+//promo
+var promoBtnsArr = [],
+  length = promoBtns.length;
+
+for (var i = 0; i < length; i++) {
+  promoBtnsArr.push(promoBtns[i]);
+}
+
+promoBtnsArr.forEach(function (promoBtn) {
+  return promoBtn.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    promoBtnsArr.forEach(function (promoBtn) {
+      promoBtn.classList.remove("current");
+    });
+    var currentName = this.getAttribute("name");
+    this.classList.add("current");
+    var newName = promoControl.className;
+    promoControl.classList.remove(newName);
+    promoControl.classList.add(currentName);
+  });
 });
 
 //services
