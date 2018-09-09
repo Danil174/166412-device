@@ -514,6 +514,7 @@ input[type="search"]:focus::placeholder {
 
 .modal-map iframe {
   position: relative;
+  display: block;
   z-index: 1;
   border: none;
 }

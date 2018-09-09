@@ -1,19 +1,82 @@
 "use strict";
 
-var mapBtn = document.querySelector(".map-link");
-var closeBtns = document.querySelectorAll(".modal-close-button");
-var servicesBtns = document.querySelectorAll(".services .device-button");
-var servicesControl = document.querySelector("#services-control");
 var promoControl = document.querySelector("#promo-slider");
 var promoBtns = document.querySelectorAll(".promo-products .promo-button");
+var servicesBtns = document.querySelectorAll(".services .device-button");
+var servicesControl = document.querySelector("#services-control");
+var mapBtn = document.querySelector(".map-link");
+var closeBtns = document.querySelectorAll(".modal-close-button");
 var modalMap = document.querySelector(".modal-map");
 var mailBtn = document.querySelector(".mail-btn");
 var modalMail = document.querySelector(".modal-mailUs");
+var form = modalMail.querySelector("form");
+var userName = modalMail.querySelector("[name=user-name]");
+var userEmail = modalMail.querySelector("[name=user-email]");
+var mailText = modalMail.querySelector("[name=mail-text]");
+var isStorageSupport = true;
+var storageUserName = "";
+var storageEmail = "";
+
+try {
+  storageUserName = localStorage.getItem("userName");
+  storageEmail = localStorage.getItem("userEmail");
+} catch (err) {
+  isStorageSupport = false;
+}
+
+//close btns
+
+// не для ie
+// var closeBtns = Array.from(document.querySelectorAll(".modal-close-button"));
+// можно конечно полифил подключить для Array.from, но он больше всего моего скрипта
+// closeBtns.forEach(closeBtn => closeBtn.addEventListener("click", function (evt) {
+//   evt.preventDefault();
+//   this.parentElement.classList.remove("modal-show");
+// }));
+
+var closeBtnsArr = [],
+    length = closeBtns.length;
+
+for (var i = 0; i < length; i++) {
+  closeBtnsArr.push(closeBtns[i]);
+}
+
+closeBtnsArr.forEach(function (closeBtn) {
+  return closeBtn.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    this.parentElement.classList.remove("modal-show");
+  });
+});
+
+//popAps
 
 mailBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
   modalMail.classList.add("modal-show");
+  if (storageUserName) {
+    userName.value = storageUserName;
+    userEmail.focus();
+    if (storageEmail) {
+      userEmail.value = storageEmail;
+      mailText.focus();
+    }
+  } else {
+    userName.focus();
+  }
 });
+
+form.addEventListener("submit", function (evt) {
+  if (!userName.value || !userEmail.value || !mailText.value) {
+    evt.preventDefault();
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem("userName", userName.value);
+      localStorage.setItem("userEmail", userEmail.value);
+    }
+    form.submit();
+  }
+});
+
 
 mapBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -62,28 +125,5 @@ servicesBtnsArr.forEach(function (serviceBtn) {
     var newName = servicesControl.className;
     servicesControl.classList.remove(newName);
     servicesControl.classList.add(currentName);
-  });
-});
-//close btns
-
-// не для ie
-// var closeBtns = Array.from(document.querySelectorAll(".modal-close-button"));
-// можно конечно полифил подключить для Array.from, но он больше всего моего скрипта
-// closeBtns.forEach(closeBtn => closeBtn.addEventListener("click", function (evt) {
-//   evt.preventDefault();
-//   this.parentElement.classList.remove("modal-show");
-// }));
-
-var closeBtnsArr = [],
-  length = closeBtns.length;
-
-for (var i = 0; i < length; i++) {
-  closeBtnsArr.push(closeBtns[i]);
-}
-
-closeBtnsArr.forEach(function (closeBtn) {
-  return closeBtn.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    this.parentElement.classList.remove("modal-show");
   });
 });
