@@ -391,19 +391,51 @@ input[type="search"]:focus::placeholder {
 }
 
 .modal-mailUs {
-  padding: 90px 100px;
+  padding: 90px 100px 80px;
+  box-sizing: border-box;
+}
+
+.mail-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 760px;
+}
+
+.modal-item {
+  width: 360px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.modal-item-big {
+  width: 760px;
 }
 
 .mail-form label {
   font-size: 18px;
   line-height: 24px;
+  display: inline-block;
+  margin-bottom: 8px;
 }
 
 .modal input,
 .modal textarea {
+  font-size: 14px;
+  line-height: 18px;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 20px;
   font-family: 'Open Sans', Arial, sans-serif;
   background-color: rgba(230, 230, 230, 0.5);
   border: none;
+  box-sizing: border-box;
+}
+
+.modal textarea {
+  resize: none;
+  height: 156px;
 }
 
 .modal input::placeholder,
@@ -422,19 +454,22 @@ input[type="search"]:focus::placeholder {
 .modal input:focus,
 .modal textarea:focus {
   background-color: transparent;
-  border: 3px solid #f0c52e;
-  outline: none;
+  outline: 3px solid #f0c52e;
 }
 
 .modal input:focus::placeholder,
 .modal textarea:focus::placeholder {
-  color: rgba(70, 70, 70, 1);;
+  color: rgba(70, 70, 70, 1);
 }
 
 .modal input:invalid,
 .modal textarea:invalid {
   background-color: rgba(237, 181, 181, 0.5);
   color: rgba(70, 70, 70, 0.4);
+}
+
+.modal .device-button {
+  width: 190px;
 }
 
 .modal-close-button {
