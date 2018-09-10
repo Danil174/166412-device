@@ -60,11 +60,13 @@ a {
 }
 
 .main-header a:hover {
-  opacity: 0.6;
+  /* opacity: 0.6; */
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .main-header a:active {
-  opacity: 0.3;
+  /* opacity: 0.3; */
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .main-navigation-search input {
@@ -169,13 +171,15 @@ input[type="search"]:focus::placeholder {
   font-size: 15px;
   line-height: 36px;
   letter-spacing: 0.01em;
-  text-transform: capitalize;
+  text-transform: initial;
   padding: 0;
   margin: 0px;
 
-  width: 0;
-  height: 0;
-  font-size: 0;
+  display: none;
+  position: absolute;
+  width: 555px;
+  top: 45px;
+  z-index: 1;
 }
 
 /* promo-products */
@@ -981,12 +985,12 @@ input[type="search"]:focus::placeholder {
   padding: 0;
 }
 
-.header-services-list .services-item-catalog {
+.header-services-list .catalog {
   position: relative;
-  width: 540px;
+  width: 245px;
 }
 
-.header-services-list .services-item-catalog::after {
+.header-services-list .catalog-link::after {
   content: "";
   position: absolute;
   background-image: url("../img/plus.svg");
@@ -995,13 +999,62 @@ input[type="search"]:focus::placeholder {
   top: 50%;
   left: 230px;
   transform: translateY(-50%);
+  opacity: 0.3;
 }
 
-.header-services-list li:nth-child(3) {
-  margin-left: 34px;
+.header-services-list .catalog-link::before {
+  content: "";
+  display: none;
+  position: absolute;
+  width: 1160px;
+  height: 129px;
+  left: -60px;
+  top: 58px;
+  background-color: #f7e296;
+  z-index: 1;
 }
 
-.header-services-list li:nth-child(4) {
+.header-services-list .catalog-link:hover::before {
+  display: block;
+}
+
+.header-services-list .catalog-link:hover ~ .header-calalog-list {
+  display: block;
+}
+
+.header-calalog-list .catalog-item {
+  display: inline-block;
+}
+
+.header-calalog-list .catalog-item:first-child {
+  margin-right: 54px;
+}
+
+.header-calalog-list .catalog-item:nth-child(2) {
+  margin-right: 72px;
+}
+
+.header-calalog-list .catalog-item:nth-child(4) {
+  margin-right: 81px;
+}
+
+.header-calalog-list .catalog-item:last-child {
+  display: block;
+}
+
+.header-services-list .services-list {
+  display: flex;
+  width: 500px;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.header-services-list .services-item:first-child {
+  margin-right: 34px;
+}
+
+.header-services-list .services-item:last-child {
   margin-left: auto;
   margin-right: -3px;
 }
