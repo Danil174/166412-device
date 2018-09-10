@@ -1002,23 +1002,24 @@ input[type="search"]:focus::placeholder {
   opacity: 0.3;
 }
 
-.header-services-list .catalog-link::before {
+.header-services-item.catalog::before {
   content: "";
   display: none;
   position: absolute;
   width: 1160px;
-  height: 129px;
+  height: 165px;
   left: -60px;
-  top: 58px;
+  top: 22px;
   background-color: #f7e296;
   z-index: 1;
 }
 
-.header-services-list .catalog-link:hover::before {
+.header-services-item.catalog:hover::before {
   display: block;
 }
 
-.header-services-list .catalog-link:hover ~ .header-calalog-list {
+.header-services-list .header-calalog-list:hover,
+.header-services-item.catalog:hover .header-calalog-list {
   display: block;
 }
 
