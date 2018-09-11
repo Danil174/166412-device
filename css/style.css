@@ -185,9 +185,14 @@ input[type="search"]:focus::placeholder {
 /* promo-products */
 
 .product-number {
+  position: absolute;
+  top: -11px;
+  right: 47px;
+
   font-size: 179px;
   line-height: 1;
   color: #fff;
+  letter-spacing: 0.015em;
 }
 
 .product-motto {
@@ -1119,20 +1124,33 @@ input[type="search"]:focus::placeholder {
 }
 
 .promo-products .picture-container {
+  position: relative;
   width: 400px;
   margin-left: 90px;
+}
+
+.slider-product img {
+  position: absolute;
+}
+
+.slider-product-1 img {
+  top: 3px;
+}
+
+.slider-product-2 img {
+  left: 26px;
+  top: 15px;
+}
+
+.slider-product-3 img {
+  top: 68px;
+  left: -59px;
 }
 
 .promo-products .info-container {
   position: relative;
   width: 500px;
   margin-right: 60px;
-}
-
-.product-number {
-  position: absolute;
-  top: -12px;
-  right: -11px;
 }
 
 .promo-products .info-container::before {
