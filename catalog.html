@@ -12,7 +12,7 @@
 <body class="catalogPage">
   <header class="main-header container">
     <div class="header-wrapper">
-      <a class="main-header-logo">DEVICE</a>
+      <a href="index.html" class="main-header-logo">DEVICE</a>
       <div class="navigation-wrapper">
         <form class="main-navigation-search" action="https://echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="main-search">Поиск по сайту</label>
@@ -37,9 +37,9 @@
         </nav>
       </div>
       <ul class="header-services-list">
-        <li class="services-item">
-          <a href="products.html">Каталог товаров</a>
-          <ul class="header-calalog-list visually-hidden">
+        <li class="header-services-item catalog">
+          <a class="catalog-link" href="products.html">Каталог товаров</a>
+          <ul class="header-calalog-list">
             <li class="catalog-item">
               <a href="#">Виртуальная реальность</a>
             </li>
@@ -60,14 +60,18 @@
             </li>
           </ul>
         </li>
-        <li class="services-item">
-          <a href="delivery.html">Доставка</a>
-        </li>
-        <li class="services-item">
-          <a href="assurance.html">Гарантия</a>
-        </li>
-        <li class="services-item">
-          <a href="contacts.html">Контакты</a>
+        <li class="header-services-item">
+          <ul class="services-list">
+            <li class="services-item">
+              <a href="delivery.html">Доставка</a>
+            </li>
+            <li class="services-item">
+              <a href="assurance.html">Гарантия</a>
+            </li>
+            <li class="services-item">
+              <a href="contacts.html">Контакты</a>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>
@@ -249,7 +253,7 @@
   <footer class="main-footer">
     <div class="footer-container">
       <div class="footer-wrapper">
-        <a class="main-footer-logo">DEVICE</a>
+        <a href="index.html" class="main-footer-logo">DEVICE</a>
         <ul class="user-navigation">
           <li class="navigation-item user">
             <a href="#">Валентин Петухов</a>
