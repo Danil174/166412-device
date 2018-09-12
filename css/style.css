@@ -649,12 +649,24 @@ input[type="search"]:focus::placeholder {
 .breadcrumbs a:active {
   color: rgba(0, 0, 0, 0.1);
 }
-
-.catalogPage fieldset {
-  border: none;
+/* filter */
+.filter label{
+  cursor: pointer;
 }
 
-/* filter */
+.filter .filter-form {
+  margin-top: 68px;
+  margin-left: 57px;
+  border: 1px solid transparent;
+}
+
+.catalogPage fieldset {
+  position: relative;
+  border: none;
+  margin: 0;
+  padding: 0px;
+}
+
 
 .visual-h2,
 .filter h2 {
@@ -665,16 +677,19 @@ input[type="search"]:focus::placeholder {
 }
 
 .filter legend {
-  font-size: 16px;
+  display: inline-block;
+  padding-top: 12px;
+  font-size: 18px;
   line-height: 24px;
-  text-transform: uppercase;
 }
 
 .custom-range {
   position: relative;
   width: 196px;
   height: 2px;
-  margin-bottom: 50px;
+  margin-left: 5px;
+  margin-top: 35px;
+  margin-bottom: 67px;
   background-color: #dbdbdb;
 }
 
@@ -705,10 +720,12 @@ input[type="search"]:focus::placeholder {
 }
 
 .icon-max-price {
-  left: 110px;
+  left: 114px;
 }
 
 .filter ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 
   font-family: 'Open Sans', Arial, sans-serif;
@@ -717,31 +734,81 @@ input[type="search"]:focus::placeholder {
   line-height: 40px;
 }
 
+.filter .color-list {
+  margin-top: 16px;
+  margin-bottom: 33px
+}
+
+.color-list label {
+  position: relative;
+  padding-left: 40px;
+}
+
+.color-list label::before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  left: 0px;
+  top: 0px;
+  background-image: url("../img/checkbox-off.svg");
+}
+
+.color-list input:checked ~ label::before {
+  width: 27px;
+  background-image: url("../img/checkbox-on.svg");
+}
+
+.filter .bluetooth-list {
+  margin-top: 18px;
+  margin-bottom: 31px;
+}
+
+.bluetooth-list label {
+  position: relative;
+  padding-left: 40px;
+}
+
+.bluetooth-list label::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 0px;
+  top: -4px;
+  border-radius: 50%;
+  border: 4px solid #000;
+  box-sizing: border-box;
+}
+
+.bluetooth-list input:checked ~ label::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  left: 8px;
+  top: 4px;
+  border-radius: 50%;
+  background-color:  #000;
+}
+
 .filter input:hover {
   opacity: 0.6;
 }
 
-.filter input:active {
-
-}
-
 .filter .button {
-  text-align: center;
-  font-size: 18px;
-  line-height: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-
-  background-color: #f0c52e;
-  border: none;
+  width: 190px;
+  z-index: 1;
 }
 
-.filter .button:hover {
-  line-height: 40px;
-}
-
-.filter .button:active {
-  color: rgba(0, 0, 0, 0.3)
+.filter fieldset::before {
+  content: "";
+  position: absolute;
+  width: 201px;
+  height: 2px;
+  left: 0px;
+  top: 0px;
+  border-top: 2px solid #000;
 }
 
 /* sort */
@@ -1480,7 +1547,7 @@ input[type="search"]:focus::placeholder {
 }
 
 .catalogPage .main-footer {
-  margin-top: 76px;
+  margin-top: 0px;
 }
 
 .footer-container {
@@ -1697,6 +1764,7 @@ input[type="search"]:focus::placeholder {
 
 .catalog-nav {
   margin-top: 23px;
+  margin-bottom: 76px
 }
 
 .pagination-list {

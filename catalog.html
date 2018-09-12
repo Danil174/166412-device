@@ -130,49 +130,49 @@
                 <span class="price-range"></span>
                 <span class="icon-min-price">Минимальная цена</span>
                 <span class="icon-max-price">Максимальная цена</span>
-                <input id="min-price" type="text" name="min-price" placeholder="от 0" value="0">
-                <input id="max-price" type="text" name="max-price" placeholder="до 5000" value="5000">
+                <input id="min-price" class="visually-hidden" type="text" name="min-price" placeholder="от 0" value="0">
+                <input id="max-price" class="visually-hidden" type="text" name="max-price" placeholder="до 5000" value="5000">
               </div>
             </fieldset>
             <fieldset>
               <legend>Цвет</legend>
               <ul class="color-list">
                 <li class="filter-option">
-                  <input type="checkbox" id="black" name="black" value="black" checked>
+                  <input class="visually-hidden" type="checkbox" id="black" name="black" value="black" checked>
                   <label for="black">Черный</label>
                 </li>
                 <li class="filter-option">
-                  <input type="checkbox" id="white" name="white" value="white">
+                  <input class="visually-hidden" type="checkbox" id="white" name="white" value="white">
                   <label for="white">Белый</label>
                 </li>
                 <li class="filter-option">
-                  <input type="checkbox" id="blue" name="blue" value="blue" checked>
+                  <input class="visually-hidden" type="checkbox" id="blue" name="blue" value="blue" checked>
                   <label for="blue">Синий</label>
                 </li>
                 <li class="filter-option">
-                  <input type="checkbox" id="red" name="red" value="red" checked>
+                  <input class="visually-hidden" type="checkbox" id="red" name="red" value="red" checked>
                   <label for="red">Красный</label>
                 </li>
                 <li class="filter-option">
-                  <input type="checkbox" id="pink" name="pink" value="pink">
+                  <input class="visually-hidden" type="checkbox" id="pink" name="pink" value="pink">
                   <label for="pink">Розовый</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset>
               <legend>Bluetooth</legend>
-              <ul>
+              <ul class="bluetooth-list">
                 <li class="filter-option">
-                  <input id="bluetooth-option-exist" type="radio" name="exist" value="exist" checked>
+                  <input class="visually-hidden" id="bluetooth-option-exist" type="radio" name="exist" value="exist" checked>
                   <label for="bluetooth-option-exist">Есть</label>
                 </li>
                 <li class="filter-option">
-                  <input id="bluetooth-option-not" type="radio" name="exist" value="not">
+                  <input class="visually-hidden" id="bluetooth-option-not" type="radio" name="exist" value="not">
                   <label for="bluetooth-option-not">Нет</label>
                 </li>
               </ul>
             </fieldset>
-            <button class="button" type="submit">Показать</button>
+            <button class="button device-button" type="submit">Показать</button>
           </form>
         </section>
 
