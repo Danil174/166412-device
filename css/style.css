@@ -200,6 +200,10 @@ input[type="search"]:focus::placeholder {
   padding-left: 19px;
 }
 
+.main-footer .navigation-item.logout {
+  margin-right: 42px;
+}
+
 .header-services-list {
   font-size: 18px;
   line-height: 24px;
@@ -1620,9 +1624,9 @@ input[type="search"]:focus::placeholder {
   margin-right: 41px;
 }
 
-.footer-container .navigation-item.user,
-.footer-container .navigation-item.login {
-
+.main-footer.user-in .navigation-item.user,
+.main-footer.user-in .navigation-item.login {
+  margin-right: 0px;
 }
 
 .footer-wrapper {
@@ -1777,7 +1781,7 @@ input[type="search"]:focus::placeholder {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 360px;
-  margin-top: 50px;
+  margin-top: 46px;
   cursor: pointer;
 }
 
