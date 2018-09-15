@@ -1316,16 +1316,12 @@ input[type="search"]:focus::placeholder {
 .icon-price {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 1px;
 
   width: 20px;
   height: 20px;
 
   font-size: 0;
-
-  background-color: #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 2px 0 0 #dadada;
   transform: translate(-10px, -11px);
   cursor: pointer;
 }
@@ -1342,6 +1338,11 @@ input[type="search"]:focus::placeholder {
   background-color: #ababab;
   border-radius: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 0 0px 0 8px #ffffff, 0 2px 0 8px #dadada;
+}
+
+.icon-price:hover::after {
+  transform: translate(-50%, -50%) scale(1.1);
 }
 
 .icon-max-price {
