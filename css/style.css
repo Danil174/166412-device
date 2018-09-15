@@ -105,6 +105,7 @@ a {
 
 .navigation-item:active::after {
   opacity: 0.3;
+  pointer-events: none;
 }
 
 .navigation-wrapper {
@@ -650,6 +651,11 @@ input[type="search"]:focus::placeholder {
   flex-direction: column;
 }
 
+.popular-product-link img,
+.popular-product-link .img-wrapper {
+  pointer-events: none;
+}
+
 .popular-product-link .img-wrapper {
   background-color: rgba(240, 197, 46, 0.5);
 }
@@ -780,6 +786,7 @@ input[type="search"]:focus::placeholder {
   padding-left: 117px;
 
   background-color: #000000;
+  pointer-events: none;
 }
 
 .services-wrapper .slider-controls::after {
@@ -1141,6 +1148,7 @@ input[type="search"]:focus::placeholder {
 
 .modal-close-button:active::before {
   opacity: 0.3;
+  pointer-events: none;
 }
 
 .modal-map p {
@@ -1962,6 +1970,7 @@ input.max-price:focus ~ .icon-max-price::after {
 
 .social-link:active::before {
   opacity: 0.1;
+  pointer-events: none;
 }
 
 .social-item:nth-child(2) .social-link::before {
