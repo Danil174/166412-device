@@ -1,5 +1,4 @@
 "use strict";
-
 var promoControl = document.querySelector("#promo-slider");
 var promoBtns = document.querySelectorAll(".promo-products .promo-button");
 var servicesBtns = document.querySelectorAll(".services .device-button");
@@ -25,15 +24,6 @@ try {
 }
 
 //close btns
-
-// не для ie
-// var closeBtns = Array.from(document.querySelectorAll(".modal-close-button"));
-// можно конечно полифил подключить для Array.from, но он больше всего моего скрипта
-// closeBtns.forEach(closeBtn => closeBtn.addEventListener("click", function (evt) {
-//   evt.preventDefault();
-//   this.parentElement.classList.remove("modal-show");
-// }));
-
 var closeBtnsArr = [],
     length = closeBtns.length;
 
@@ -49,7 +39,6 @@ closeBtnsArr.forEach(function (closeBtn) {
 });
 
 //popAps
-
 mailBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
   modalMail.classList.add("modal-show");

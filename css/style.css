@@ -138,15 +138,16 @@ a {
 .main-navigation-search input {
   position: relative;
 
-  line-height: initial;
+  box-sizing: border-box;
   width: 354px;
   padding-top: 16px;
   padding-bottom: 15px;
   padding-left: 38px;
 
+  line-height: initial;
+
   background-color: transparent;
   border: none;
-  box-sizing: border-box;
 }
 
 input[type="search"]::placeholder {
@@ -170,6 +171,7 @@ input[type="search"]:focus::placeholder {
   outline: none;
 }
 
+.main-navigation-search input:not(:placeholder-shown) ~ .search-button,
 .main-navigation-search input:focus ~ .search-button {
   opacity: 1;
 }
@@ -181,14 +183,13 @@ input[type="search"]:focus::placeholder {
   padding-bottom: 8px;
 
   font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
   font-family: "Open Sans", Arial, sans-serif;
   vertical-align: middle;
   text-align: center;
   color: #000000;
   text-transform: capitalize;
-
-  font-size: 15px;
-  line-height: 30px;
 
   background-color: transparent;
   border: 2px solid #000000;
@@ -1323,6 +1324,7 @@ input[type="search"]:focus::placeholder {
   height: 20px;
 
   font-size: 0;
+
   transform: translate(-10px, -11px);
   cursor: pointer;
 }
@@ -1338,8 +1340,8 @@ input[type="search"]:focus::placeholder {
 
   background-color: #ababab;
   border-radius: 50%;
+  box-shadow: 0 0 0 8px #ffffff, 0 2px 0 8px #dadada;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0px 0 8px #ffffff, 0 2px 0 8px #dadada;
 }
 
 .icon-price:hover::after {
@@ -1376,11 +1378,11 @@ input[type="search"]:focus::placeholder {
 }
 
 input.min-price:focus ~ .icon-min-price::after {
-  box-shadow: 0 0px 0 8px #f0c52e, 0 2px 0 8px #dadada;
+  box-shadow: 0 0 0 8px #f0c52e, 0 2px 0 8px #dadada;
 }
 
 input.max-price:focus ~ .icon-max-price::after {
-  box-shadow: 0 0px 0 8px #f0c52e, 0 2px 0 8px #dadada;
+  box-shadow: 0 0 0 8px #f0c52e, 0 2px 0 8px #dadada;
 }
 
 .filter ul {
@@ -1410,12 +1412,12 @@ input.max-price:focus ~ .icon-max-price::after {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
 
   width: 23px;
   height: 23px;
 
   background-image: url("../img/checkbox-off.svg");
-  z-index: 1;
 }
 
 .color-list input:checked ~ label::before {
@@ -1429,9 +1431,11 @@ input.max-price:focus ~ .icon-max-price::after {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #f0c52e;
+
   width: 23px;
   height: 23px;
+
+  background-color: #f0c52e;
   border-radius: 4px;
 }
 
@@ -1922,6 +1926,12 @@ input.max-price:focus ~ .icon-max-price::after {
   padding: 0;
 
   font-size: 0;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .footer-social-list {
+    margin-left: 0;
+  }
 }
 
 .footer-social-list li {
