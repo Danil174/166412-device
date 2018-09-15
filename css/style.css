@@ -44,6 +44,7 @@ body {
   letter-spacing: 0.014em;
 
   background-color: #ffffff;
+  /* font-kerning: none; */
 }
 
 a {
@@ -137,7 +138,7 @@ a {
 .main-navigation-search input {
   position: relative;
 
-  box-sizing: border-box;
+  line-height: initial;
   width: 354px;
   padding-top: 16px;
   padding-bottom: 15px;
@@ -175,8 +176,8 @@ input[type="search"]:focus::placeholder {
 .search-button {
   width: 85px;
   margin-left: -4px;
-  padding-top: 15px;
-  padding-bottom: 14px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 
   font-weight: 300;
   font-family: "Open Sans", Arial, sans-serif;
@@ -184,6 +185,9 @@ input[type="search"]:focus::placeholder {
   text-align: center;
   color: #000000;
   text-transform: capitalize;
+
+  font-size: 15px;
+  line-height: 30px;
 
   background-color: transparent;
   border: 2px solid #000000;
