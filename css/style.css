@@ -355,6 +355,7 @@ input[type="search"]:focus::placeholder {
   background-color: #f7e296;
 }
 
+.no-js .header-calalog-list,
 .header-services-list .header-calalog-list.menu-open,
 .header-services-item.catalog:hover .header-calalog-list {
   display: block;
