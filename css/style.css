@@ -2281,8 +2281,9 @@ input.max-price:focus ~ .icon-max-price::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-      flex-wrap: wrap;
-  width: 463px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 500px;
   margin: 6px auto 0;
   padding: 0;
 
