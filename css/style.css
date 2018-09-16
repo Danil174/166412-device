@@ -104,7 +104,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 }
 
 .main-navigation-search {
@@ -164,7 +164,7 @@ input[type="search"]:focus::placeholder {
   outline: none;
 }
 
-/* .main-navigation-search input:not(:placeholder-shown) ~ .search-button, */
+.main-navigation-search input:valid ~ .search-button,
 .search-button:focus,
 .main-navigation-search input:focus ~ .search-button {
   opacity: 1;
@@ -204,7 +204,8 @@ input[type="search"]:focus::placeholder {
 
 .user-navigation,
 .header-services-list,
-.header-calalog-list {
+.header-calalog-list,
+.catalog-list-row {
   list-style: none;
 }
 
@@ -312,7 +313,7 @@ input[type="search"]:focus::placeholder {
 
 .header-calalog-list {
   position: absolute;
-  top: 45px;
+  top: 43px;
   z-index: 1;
 
   display: none;
@@ -326,6 +327,10 @@ input[type="search"]:focus::placeholder {
   font-family: "Open Sans", Arial, sans-serif;
   text-transform: capitalize;
   letter-spacing: 0.01em;
+}
+
+.header-services-item .catalog-link {
+  position: relative;
 }
 
 .header-services-list .catalog-link::after {
@@ -345,12 +350,12 @@ input[type="search"]:focus::placeholder {
 .header-services-item.catalog .header-calalog-list::before {
   content: "";
   position: absolute;
-  top: -25px;
+  top: -10px;
   left: -60px;
   z-index: -1;
 
   width: 1160px;
-  height: 165px;
+  height: 154px;
 
   background-color: #f7e296;
 }
@@ -361,29 +366,37 @@ input[type="search"]:focus::placeholder {
   display: block;
 }
 
-.header-calalog-list .catalog-item {
-  display: inline-block;
+.header-calalog-list .catalog-list-row {
+  margin: 0;
+  padding: 0;
+  text-transform: initial;
 }
 
-.header-calalog-list .catalog-item:first-child {
+.header-calalog-list .catalog-item {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.catalog-list-row.first-row .catalog-item:first-child {
   margin-right: 54px;
 }
 
-.header-calalog-list .catalog-item:nth-child(2) {
+.catalog-list-row.first-row .catalog-item:nth-child(2) {
   margin-right: 72px;
 }
 
-.header-calalog-list .catalog-item:nth-child(4) {
-  margin-right: 81px;
+.catalog-list-row.second-row,
+.catalog-list-row.third-row {
+  margin-top: -2px;
 }
 
-.header-calalog-list .catalog-item:last-child {
-  display: block;
-  width: 105px;
+.catalog-list-row.second-row .catalog-item:first-child {
+  margin-right: 81px;
 }
 
 .header-services-list .services-list {
   display: flex;
+  flex-wrap: wrap;
   width: 500px;
   margin: 0;
   padding: 0;
@@ -412,11 +425,13 @@ input[type="search"]:focus::placeholder {
 
 .promo-products .slider-controls {
   position: absolute;
+  display: flex;
+  flex-wrap: wrap;
   top: 330px;
   right: 83px;
   z-index: 1;
 
-  width: auto;
+  width: 99px;
   height: 12px;
 
   font-size: 0;
@@ -428,6 +443,7 @@ input[type="search"]:focus::placeholder {
   width: 12px;
   height: 12px;
   margin-left: 21px;
+  margin-bottom: 5px;
   padding: 0;
 
   font: inherit;
@@ -541,12 +557,14 @@ input[type="search"]:focus::placeholder {
   font-weight: 300;
   font-family: "Open Sans", Arial, sans-serif;
   color: #464646;
+  letter-spacing: 0.01em;
 }
 
 .device-button {
   position: relative;
 
   display: inline-block;
+  vertical-align: middle;
   box-sizing: content-box;
   width: 210px;
   height: 22px;
@@ -606,6 +624,7 @@ input[type="search"]:focus::placeholder {
 
 .product-properties td {
   display: inline-block;
+  vertical-align: middle;
   padding: 0;
 }
 
@@ -641,6 +660,7 @@ input[type="search"]:focus::placeholder {
 
 .popular-poducts-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
   padding: 0;
@@ -751,6 +771,7 @@ input[type="search"]:focus::placeholder {
   position: relative;
 
   width: 300px;
+  padding-bottom: 138px
 }
 
 .services-wrapper .device-button {
@@ -798,7 +819,7 @@ input[type="search"]:focus::placeholder {
   right: 16px;
 
   width: 7px;
-  height: 319px;
+  height: 82%;
 
   background-color: #000000;
 }
@@ -819,14 +840,17 @@ input[type="search"]:focus::placeholder {
 
 .delivery .services-item-delivery {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .warranty .services-item-warranty {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .credit .services-item-credit {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .services-list h3 {
@@ -910,7 +934,7 @@ input[type="search"]:focus::placeholder {
 .about {
   position: relative;
 
-  width: 476px;
+  width: 468px;
 }
 
 .contacts {
@@ -950,6 +974,7 @@ input[type="search"]:focus::placeholder {
 
 .about p:last-of-type {
   margin-bottom: 66px;
+  letter-spacing: -0.011em;
 }
 
 .about .transport-list {
@@ -960,7 +985,7 @@ input[type="search"]:focus::placeholder {
   list-style-type: none;
   font-size: 16px;
   line-height: 40px;
-  letter-spacing: 0;
+  letter-spacing: 0.007em;
 }
 
 .about .transport-item {
@@ -1055,6 +1080,7 @@ input[type="search"]:focus::placeholder {
 
 .mail-form label {
   display: inline-block;
+  vertical-align: middle;
   margin-bottom: 8px;
 
   font-size: 18px;
@@ -1216,6 +1242,7 @@ input[type="search"]:focus::placeholder {
   position: relative;
 
   display: inline-block;
+  vertical-align: middle;
   padding-right: 33px;
 }
 
@@ -1299,6 +1326,7 @@ input[type="search"]:focus::placeholder {
 
 .filter legend {
   display: inline-block;
+  vertical-align: middle;
   padding-top: 12px;
 
   font-size: 18px;
@@ -1375,7 +1403,7 @@ input[type="search"]:focus::placeholder {
   font-weight: 300;
   font-size: 14px;
   line-height: 24px;
-  font-family: "Gilroy";
+  font-family: "Gilroy", Arial, sans-serif;
   color: #000000;
 
   opacity: 0.2;
@@ -1442,7 +1470,7 @@ input.max-price:focus ~ .icon-max-price::after {
 .color-list input:focus ~ label::after {
   content: "";
   position: absolute;
-  top: 0;
+  top: -2px;
   left: 0;
 
   width: 23px;
@@ -1497,6 +1525,14 @@ input.max-price:focus ~ .icon-max-price::after {
 .filter input:hover {
   opacity: 0.6;
 }
+.filter input:disabled ~ label,
+.filter input:disabled ~ label::after,
+.filter input:disabled ~ label::before,
+.filter input:disabled ~ label:hover,
+.filter input:disabled ~ label:hover::after,
+.filter input:disabled ~ label:hover::before {
+  opacity: 0.25;
+}
 
 .filter .button {
   z-index: 1;
@@ -1544,6 +1580,7 @@ input.max-price:focus ~ .icon-max-price::after {
 
 .sort-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   width: 600px;
   margin: 0;
@@ -1630,8 +1667,9 @@ input.max-price:focus ~ .icon-max-price::after {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-content: flex-start;
   width: 360px;
-  margin-top: 46px;
+  margin-top: 49px;
 
   cursor: pointer;
 }
@@ -1639,7 +1677,7 @@ input.max-price:focus ~ .icon-max-price::after {
 .catalog-list .catalog-item.new::before {
   content: "NEW";
   position: absolute;
-  top: 20px;
+  top: 25px;
   right: 26px;
 
   box-sizing: border-box;
@@ -1649,7 +1687,7 @@ input.max-price:focus ~ .icon-max-price::after {
   font-weight: 900;
   font-size: 14px;
   line-height: 61px;
-  font-family: "Gilroy";
+  font-family: "Gilroy", Arial, sans-serif;
   text-align: center;
   color: #000000;
 
@@ -1701,7 +1739,7 @@ input.max-price:focus ~ .icon-max-price::after {
 }
 
 .catalog-list img {
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 }
 
 .catalog-list span,
@@ -1739,6 +1777,7 @@ input.max-price:focus ~ .icon-max-price::after {
 
 .pagination-list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -1846,8 +1885,12 @@ input.max-price:focus ~ .icon-max-price::after {
   background-color: #ffc600;
 }
 
+.navigation-item a {
+  opacity: 0.7;
+}
+
 .main-footer a:hover {
-  opacity: 0.6;
+  opacity: 1;
 }
 
 .main-footer a:active {
@@ -1882,15 +1925,15 @@ input.max-price:focus ~ .icon-max-price::after {
 
 .footer-navigation-item.navigation-item.user a::after,
 .footer-navigation-item.navigation-item.login a::after {
-  background-image: url("../img/userFt.svg");
+  background-image: url("../img/user-ftr.svg");
 }
 
 .footer-navigation-item.navigation-item.compare a::after {
-  background-image: url("../img/compareFt.svg");
+  background-image: url("../img/compare-ftr.svg");
 }
 
 .footer-navigation-item.navigation-item.cart a::after {
-  background-image: url("../img/cartFt.svg");
+  background-image: url("../img/cart-ftr.svg");
 }
 
 .main-footer-logo {
@@ -1922,6 +1965,7 @@ input.max-price:focus ~ .icon-max-price::after {
 
 .footer-services-list {
   display: flex;
+  flex-wrap: wrap;
   width: 463px;
   margin: 6px auto 0;
   padding: 0;

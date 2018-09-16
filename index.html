@@ -19,7 +19,7 @@
       <div class="navigation-wrapper">
         <form class="main-navigation-search" action="https://echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="main-search">Поиск по сайту</label>
-          <input id="main-search" type="search" name="main-search" placeholder="Поиск по сайту">
+          <input id="main-search" type="search" name="main-search" placeholder="Поиск по сайту" required>
           <button class="search-button" type="submit">найти</button>
         </form>
         <nav class="main-navigation">
@@ -40,23 +40,35 @@
         <li class="header-services-item catalog">
           <a class="catalog-link" href="products.html">Каталог товаров</a>
           <ul class="header-calalog-list">
-            <li class="catalog-item">
-              <a href="#">Виртуальная реальность</a>
+            <li>
+              <ul class="catalog-list-row first-row">
+                <li class="catalog-item">
+                  <a href="#">Виртуальная реальность</a>
+                </li>
+                <li class="catalog-item">
+                  <a href="#">Фитнес-браслеты</a>
+                </li>
+                <li class="catalog-item">
+                  <a href="#">Квадрокоптеры</a>
+                </li>
+              </ul>
             </li>
-            <li class="catalog-item">
-              <a href="#">Фитнес-браслеты</a>
+            <li>
+              <ul class="catalog-list-row second-row">
+                <li class="catalog-item">
+                  <a href="catalog.html">Моноподы для селфи</a>
+                </li>
+                <li class="catalog-item">
+                  <a href="#">Умные часы</a>
+                </li>
+              </ul>
             </li>
-            <li class="catalog-item">
-              <a href="#">Квадрокоптеры</a>
-            </li>
-            <li class="catalog-item">
-              <a href="catalog.html">Моноподы для селфи</a>
-            </li>
-            <li class="catalog-item">
-              <a href="#">Умные часы</a>
-            </li>
-            <li class="catalog-item">
-              <a href="#">Экшн-камеры</a>
+            <li>
+              <ul class="catalog-list-row third-row">
+                <li class="catalog-item">
+                  <a href="#">Экшн-камеры</a>
+                </li>
+              </ul>
             </li>
           </ul>
         </li>
@@ -245,20 +257,28 @@
       <h2 class="visually-hidden">Наши бренды</h2>
       <ul class="brends-list">
         <li class="brend-item">
-          <img src="img/logo-1.jpg" width="260" height="100" alt="DJI">
-          <img class="hover-img" src="img/logo-1-hov.jpg" width="260" height="100" alt="DJI">
+          <a href="http://www.dji.com/" aria-label="Магазин DJI">
+            <img src="img/logo-1.jpg" width="260" height="100" alt="DJI">
+            <img class="hover-img" src="img/logo-1-hov.jpg" width="260" height="100" alt="DJI">
+          </a>
         </li>
         <li class="brend-item">
-          <img src="img/logo-2.jpg" width="260" height="100" alt="SP GADGETS">
-          <img class="hover-img" src="img/logo-2-hov.jpg" width="260" height="100" alt="SP GADGETS">
+          <a class="partner-link" href="http://www.sp-gadgets.com/" aria-label="Магазин SP GADGETS">
+            <img src="img/logo-2.jpg" width="260" height="100" alt="SP GADGETS">
+            <img class="hover-img" src="img/logo-2-hov.jpg" width="260" height="100" alt="SP GADGETS">
+          </a>
         </li>
         <li class="brend-item">
-          <img src="img/logo-3.jpg" width="260" height="100" alt="SP GADGETS">
-          <img class="hover-img" src="img/logo-3-hov.jpg" width="260" height="100" alt="GoPro">
+          <a class="partner-link" href="http://gopro.ru/">
+            <img src="img/logo-3.jpg" width="260" height="100" alt="GoPro" aria-label="Магазин GoPro">
+            <img class="hover-img" src="img/logo-3-hov.jpg" width="260" height="100" alt="GoPro">
+          </a>
         </li>
         <li class="brend-item">
-          <img src="img/logo-4.jpg" width="260" height="100" alt="SP GADGETS">
-          <img class="hover-img" src="img/logo-4-hov.jpg" width="260" height="100" alt="VIVE">
+          <a class="partner-link" href="https://www.htcvive.com/">
+            <img src="img/logo-4.jpg" width="260" height="100" alt="VIVE" aria-label="Магазин VIVE">
+            <img class="hover-img" src="img/logo-4-hov.jpg" width="260" height="100" alt="VIVE">
+          </a>
         </li>
       </ul>
     </section>
@@ -365,7 +385,7 @@
             </a>
           </li>
         </ul>
-        <a class="developer-logo" href="https://htmlacademy.ru/intensive/htmlcss">
+        <a class="developer-logo" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Сайт разработчика HTML Academy">
           <img src="img/developer.svg" width="27" height="35" alt="Сделано в HTML Academy">
         </a>
       </div>
