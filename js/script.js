@@ -1,4 +1,7 @@
 "use strict";
+
+var headerDropDownBtn = document.querySelector(".header-services-list .catalog-link");
+var dropDownMenu = document.querySelector(".main-header .header-calalog-list")
 var promoControl = document.querySelector("#promo-slider");
 var promoBtns = document.querySelectorAll(".promo-products .promo-button");
 var servicesBtns = document.querySelectorAll(".services .device-button");
@@ -22,6 +25,19 @@ try {
 } catch (err) {
   isStorageSupport = false;
 }
+
+//header drop down menu
+headerDropDownBtn.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  dropDownMenu.classList.toggle("menu-open");
+});
+
+headerDropDownBtn.addEventListener("keypress", function (evt) {
+  evt.preventDefault();
+  if (evt.keyCode === 32) {
+    dropDownMenu.classList.toggle("menu-open");
+  }
+});
 
 //close btns
 var closeBtnsArr = [],

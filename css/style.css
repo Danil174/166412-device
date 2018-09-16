@@ -340,25 +340,20 @@ input[type="search"]:focus::placeholder {
   opacity: 0.3;
 }
 
-.header-services-item.catalog::before {
+.header-services-item.catalog .header-calalog-list::before {
   content: "";
   position: absolute;
-  top: 22px;
+  top: -25px;
   left: -60px;
-  z-index: 1;
+  z-index: -1;
 
-  display: none;
   width: 1160px;
   height: 165px;
 
   background-color: #f7e296;
 }
 
-.header-services-item.catalog:hover::before {
-  display: block;
-}
-
-.header-services-list .header-calalog-list:hover,
+.header-services-list .header-calalog-list.menu-open,
 .header-services-item.catalog:hover .header-calalog-list {
   display: block;
 }
@@ -381,6 +376,7 @@ input[type="search"]:focus::placeholder {
 
 .header-calalog-list .catalog-item:last-child {
   display: block;
+  width: 105px;
 }
 
 .header-services-list .services-list {
