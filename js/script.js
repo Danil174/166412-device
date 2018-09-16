@@ -54,6 +54,23 @@ mailBtn.addEventListener("click", function (evt) {
   }
 });
 
+mailBtn.addEventListener("keypress", function (evt) {
+  evt.preventDefault();
+  if (evt.keyCode === 32) {
+    modalMail.classList.add("modal-show");
+    if (storageUserName) {
+      userName.value = storageUserName;
+      userEmail.focus();
+      if (storageEmail) {
+        userEmail.value = storageEmail;
+        mailText.focus();
+      }
+    } else {
+      userName.focus();
+    }
+  }
+});
+
 form.addEventListener("submit", function (evt) {
   if (!userName.value || !userEmail.value || !mailText.value) {
     evt.preventDefault();
@@ -70,6 +87,13 @@ form.addEventListener("submit", function (evt) {
 mapBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
   modalMap.classList.add("modal-show");
+});
+
+mapBtn.addEventListener("keypress", function (evt) {
+  evt.preventDefault();
+  if (evt.keyCode === 32) {
+    modalMap.classList.add("modal-show");
+  }
 });
 
 //promo
