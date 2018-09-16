@@ -39,40 +39,25 @@ headerDropDownBtn.addEventListener("keypress", function (evt) {
   }
 });
 
-//close btns
-var closeBtnsArr = [],
-    length = closeBtns.length;
+if (mailBtn) {
+  //close btns
+  var closeBtnsArr = [],
+      length = closeBtns.length;
 
-for (var i = 0; i < length; i++) {
-  closeBtnsArr.push(closeBtns[i]);
-}
-
-closeBtnsArr.forEach(function (closeBtn) {
-  return closeBtn.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    this.parentElement.classList.remove("modal-show");
-  });
-});
-
-//popAps
-mailBtn.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  modalMail.classList.add("modal-show");
-  if (storageUserName) {
-    userName.value = storageUserName;
-    userEmail.focus();
-    if (storageEmail) {
-      userEmail.value = storageEmail;
-      mailText.focus();
-    }
-  } else {
-    userName.focus();
+  for (var i = 0; i < length; i++) {
+    closeBtnsArr.push(closeBtns[i]);
   }
-});
 
-mailBtn.addEventListener("keypress", function (evt) {
-  evt.preventDefault();
-  if (evt.keyCode === 32) {
+  closeBtnsArr.forEach(function (closeBtn) {
+    return closeBtn.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      this.parentElement.classList.remove("modal-show");
+    });
+  });
+
+  //popAps
+  mailBtn.addEventListener("click", function (evt) {
+    evt.preventDefault();
     modalMail.classList.add("modal-show");
     if (storageUserName) {
       userName.value = storageUserName;
@@ -84,75 +69,92 @@ mailBtn.addEventListener("keypress", function (evt) {
     } else {
       userName.focus();
     }
-  }
-});
+  });
 
-form.addEventListener("submit", function (evt) {
-  if (!userName.value || !userEmail.value || !mailText.value) {
+  mailBtn.addEventListener("keypress", function (evt) {
     evt.preventDefault();
-  } else {
-    if (isStorageSupport) {
-      localStorage.setItem("userName", userName.value);
-      localStorage.setItem("userEmail", userEmail.value);
+    if (evt.keyCode === 32) {
+      modalMail.classList.add("modal-show");
+      if (storageUserName) {
+        userName.value = storageUserName;
+        userEmail.focus();
+        if (storageEmail) {
+          userEmail.value = storageEmail;
+          mailText.focus();
+        }
+      } else {
+        userName.focus();
+      }
     }
-    form.submit();
-  }
-});
+  });
+
+  form.addEventListener("submit", function (evt) {
+    if (!userName.value || !userEmail.value || !mailText.value) {
+      evt.preventDefault();
+    } else {
+      if (isStorageSupport) {
+        localStorage.setItem("userName", userName.value);
+        localStorage.setItem("userEmail", userEmail.value);
+      }
+      form.submit();
+    }
+  });
 
 
-mapBtn.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  modalMap.classList.add("modal-show");
-});
-
-mapBtn.addEventListener("keypress", function (evt) {
-  evt.preventDefault();
-  if (evt.keyCode === 32) {
+  mapBtn.addEventListener("click", function (evt) {
+    evt.preventDefault();
     modalMap.classList.add("modal-show");
+  });
+
+  mapBtn.addEventListener("keypress", function (evt) {
+    evt.preventDefault();
+    if (evt.keyCode === 32) {
+      modalMap.classList.add("modal-show");
+    }
+  });
+
+  //promo
+  var promoBtnsArr = [],
+    length = promoBtns.length;
+
+  for (var i = 0; i < length; i++) {
+    promoBtnsArr.push(promoBtns[i]);
   }
-});
 
-//promo
-var promoBtnsArr = [],
-  length = promoBtns.length;
-
-for (var i = 0; i < length; i++) {
-  promoBtnsArr.push(promoBtns[i]);
-}
-
-promoBtnsArr.forEach(function (promoBtn) {
-  return promoBtn.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    promoBtnsArr.forEach(function (promoBtn) {
-      promoBtn.classList.remove("current");
+  promoBtnsArr.forEach(function (promoBtn) {
+    return promoBtn.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      promoBtnsArr.forEach(function (promoBtn) {
+        promoBtn.classList.remove("current");
+      });
+      var currentName = this.getAttribute("name");
+      this.classList.add("current");
+      var newName = promoControl.className;
+      promoControl.classList.remove(newName);
+      promoControl.classList.add(currentName);
     });
-    var currentName = this.getAttribute("name");
-    this.classList.add("current");
-    var newName = promoControl.className;
-    promoControl.classList.remove(newName);
-    promoControl.classList.add(currentName);
   });
-});
 
-//services
+  //services
 
-var servicesBtnsArr = [],
-  length = servicesBtns.length;
+  var servicesBtnsArr = [],
+    length = servicesBtns.length;
 
-for (var i = 0; i < length; i++) {
-  servicesBtnsArr.push(servicesBtns[i]);
-}
+  for (var i = 0; i < length; i++) {
+    servicesBtnsArr.push(servicesBtns[i]);
+  }
 
-servicesBtnsArr.forEach(function (serviceBtn) {
-  return serviceBtn.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    servicesBtnsArr.forEach(function (serviceBtn) {
-      serviceBtn.classList.remove("current");
+  servicesBtnsArr.forEach(function (serviceBtn) {
+    return serviceBtn.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      servicesBtnsArr.forEach(function (serviceBtn) {
+        serviceBtn.classList.remove("current");
+      });
+      var currentName = this.getAttribute("name");
+      this.classList.add("current");
+      var newName = servicesControl.className;
+      servicesControl.classList.remove(newName);
+      servicesControl.classList.add(currentName);
     });
-    var currentName = this.getAttribute("name");
-    this.classList.add("current");
-    var newName = servicesControl.className;
-    servicesControl.classList.remove(newName);
-    servicesControl.classList.add(currentName);
   });
-});
+}
