@@ -32,6 +32,7 @@
 
 body {
   width: 100%;
+  min-width: 1200px;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -164,6 +165,7 @@ input[type="search"]:focus::placeholder {
 }
 
 /* .main-navigation-search input:not(:placeholder-shown) ~ .search-button, */
+.search-button:focus,
 .main-navigation-search input:focus ~ .search-button {
   opacity: 1;
 }
@@ -1788,6 +1790,7 @@ input.max-price:focus ~ .icon-max-price::after {
 
 .main-footer {
   margin-top: 82px;
+  width: 100%;
 
   color: #ffffff;
 
