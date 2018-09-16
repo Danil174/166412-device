@@ -91,20 +91,12 @@ a {
   cursor: pointer;
 }
 
-.main-header a:hover {
+.main-header a:not(.login-link):hover {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.navigation-item:hover::after {
-  opacity: 0.6;
-}
-
-.main-header a:active {
+.main-header a:not(.login-link):active {
   color: rgba(0, 0, 0, 0.3);
-}
-
-.navigation-item:active::after {
-  opacity: 0.3;
 }
 
 .navigation-wrapper {
@@ -225,13 +217,22 @@ input[type="search"]:focus::placeholder {
   font-family: "Open Sans", Arial, sans-serif;
 }
 
-.navigation-item {
+.navigation-item a {
   position: relative;
 
   padding-left: 26px;
 }
 
-.navigation-item::after {
+
+.navigation-item a:hover {
+  opacity: 0.6;
+}
+
+.navigation-item a:active {
+  opacity: 0.3;
+}
+
+.navigation-item a::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -241,8 +242,8 @@ input[type="search"]:focus::placeholder {
   transform: translateY(-50%);
 }
 
-.navigation-item.user::after,
-.navigation-item.login::after {
+.navigation-item.user a::after,
+.navigation-item.login a::after {
   width: 13px;
   height: 12px;
 
@@ -250,13 +251,16 @@ input[type="search"]:focus::placeholder {
 }
 
 .navigation-item.compare {
-  margin-right: 41px;
+  margin-right: 40px;
   margin-left: auto;
+}
+
+.navigation-item.compar a {
   padding-left: 20px;
 }
 
-.navigation-item.compare::after {
-  top: 53%;
+.navigation-item.compare a::after {
+  left: 6px;
 
   width: 10px;
   height: 10px;
@@ -264,25 +268,25 @@ input[type="search"]:focus::placeholder {
   background-image: url("../img/compare.svg");
 }
 
-.navigation-item.cart {
+.navigation-item.cart a {
   padding-left: 22px;
 }
 
-.navigation-item.cart::after {
+.navigation-item.cart a::after {
   width: 12px;
   height: 12px;
 
   background-image: url("../img/cart.svg");
 }
 
-.navigation-item.logout {
+.navigation-item.logout a {
   padding-left: 19px;
 
   opacity: 0.3;
 }
 
 .main-footer .navigation-item.logout {
-  margin-right: 42px;
+  margin-right: 37px;
 }
 
 .header-services-list {
@@ -1858,7 +1862,7 @@ input.max-price:focus ~ .icon-max-price::after {
 
 .footer-container .navigation-item.user,
 .footer-container .navigation-item.login {
-  margin-right: 41px;
+  margin-right: 36px;
   margin-left: auto;
 }
 
@@ -1868,16 +1872,16 @@ input.max-price:focus ~ .icon-max-price::after {
 }
 
 
-.main-footer .navigation-item.user::after,
-.main-footer .navigation-item.login::after {
+.footer-navigation-item.navigation-item.user a::after,
+.footer-navigation-item.navigation-item.login a::after {
   background-image: url("../img/userFt.svg");
 }
 
-.main-footer .navigation-item.compare::after {
+.footer-navigation-item.navigation-item.compare a::after {
   background-image: url("../img/compareFt.svg");
 }
 
-.main-footer .navigation-item.cart::after {
+.footer-navigation-item.navigation-item.cart a::after {
   background-image: url("../img/cartFt.svg");
 }
 
