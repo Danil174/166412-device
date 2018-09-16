@@ -512,7 +512,7 @@ input[type="search"]:focus::placeholder {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  top: 330px;
+  bottom: 154px;
   right: 83px;
   z-index: 1;
 
