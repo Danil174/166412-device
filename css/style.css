@@ -530,6 +530,7 @@ input[type="search"]:focus::placeholder {
 
   font-size: 47px;
   line-height: 56px;
+  letter-spacing: 0.012em;
 }
 
 .product-info {
@@ -697,25 +698,25 @@ input[type="search"]:focus::placeholder {
 
 .popular-product.monopod img {
   margin-bottom: 3px;
-  margin-left: 2px;
+  margin-left: 1px;
 }
 
 .popular-product.action-camera img {
-  margin-left: 10px;
+  margin-left: 8px;
 }
 
 .popular-product.band img {
   margin-top: 2px;
-  margin-left: 4px;
+  margin-left: 2px;
 }
 
 .popular-product.clock img {
-  margin-left: 7px;
+  margin-left: 6px;
 }
 
-.popular-product.monopod img {
+.popular-product.quadrocopter img {
   margin-top: 4px;
-  margin-left: -1px;
+  margin-right: 2px;
 }
 
 .popular-poducts-list h3 {
@@ -736,8 +737,8 @@ input[type="search"]:focus::placeholder {
   width: 100%;
   margin-top: 81px;
 
-  background: linear-gradient(to bottom,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0)  100px,#e5e5e5 100px,#e5e5e5 100%);
   background-color: #e5e5e5;
+  background: linear-gradient(to bottom,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0)  100px,#e5e5e5 100px,#e5e5e5 100%);
 }
 
 .services-wrapper {
@@ -834,6 +835,7 @@ input[type="search"]:focus::placeholder {
 
   font-size: 47px;
   line-height: 48px;
+  letter-spacing: 0.021em;
 }
 
 .services-list p {
@@ -857,7 +859,7 @@ input[type="search"]:focus::placeholder {
   display: flex;
   justify-content: space-between;
   margin: 0;
-  margin-top: 94px;
+  margin-top: 92px;
   padding: 0;
 
   list-style: none;
@@ -891,7 +893,7 @@ input[type="search"]:focus::placeholder {
   display: flex;
   justify-content: space-between;
   width: 1160px;
-  margin: 81px auto 0;
+  margin: 83px auto 0;
 }
 
 .contacts::before,
@@ -924,6 +926,8 @@ input[type="search"]:focus::placeholder {
 
   font-size: 47px;
   line-height: 48px;
+  margin-left: -2px;
+  letter-spacing: 0.01em;
 }
 
 .about p,
@@ -1191,6 +1195,7 @@ input[type="search"]:focus::placeholder {
 
   font-size: 47px;
   line-height: 48px;
+  letter-spacing: 0.014em;
 }
 
 .breadcrumbs {
@@ -1289,7 +1294,7 @@ input[type="search"]:focus::placeholder {
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.23em;
 }
 
 .filter legend {
@@ -1402,10 +1407,11 @@ input.max-price:focus ~ .icon-max-price::after {
   font-size: 14px;
   line-height: 40px;
   font-family: "Open Sans", Arial, sans-serif;
+  letter-spacing: 0.001em;
 }
 
 .filter .color-list {
-  margin-top: 16px;
+  margin-top: 18px;
   margin-bottom: 33px;
 }
 
@@ -1418,8 +1424,8 @@ input.max-price:focus ~ .icon-max-price::after {
 .color-list label::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -2px;
+  left: 0px;
   z-index: 1;
 
   width: 23px;
@@ -1430,7 +1436,6 @@ input.max-price:focus ~ .icon-max-price::after {
 
 .color-list input:checked ~ label::before {
   width: 27px;
-
   background-image: url("../img/checkbox-on.svg");
 }
 
@@ -1527,12 +1532,23 @@ input.max-price:focus ~ .icon-max-price::after {
   background-color: #f2f2f2;
 }
 
+.sort h2 {
+  margin: 0;
+  margin-left: 72px;
+
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.23em;
+}
+
 .sort-list {
   display: flex;
   align-items: center;
   width: 600px;
   margin: 0;
-  margin-left: 54px;
+  margin-left: 50px;
+  margin-bottom: 2px;
   padding: 0;
 
   list-style: none;
@@ -1540,20 +1556,11 @@ input.max-price:focus ~ .icon-max-price::after {
   font-size: 14px;
   line-height: 18px;
   font-family: "Open Sans", Arial, sans-serif;
-}
-
-.sort h2 {
-  margin: 0;
-  margin-left: 73px;
-
-  font-size: 16px;
-  line-height: 24px;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0;
 }
 
 .sort-list li {
-  margin-right: 28px;
+  margin-right: 29px;
 
   color: rgba(0, 0, 0, 0.3);
 }
@@ -1593,6 +1600,7 @@ input.max-price:focus ~ .icon-max-price::after {
 .sort-list .arrow-down {
   margin-right: 0;
   margin-left: 19px;
+  margin-top: 1px;
 
   background-image: url("../img/icon-down.svg");
 }
