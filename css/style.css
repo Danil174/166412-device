@@ -480,7 +480,7 @@ input[type="search"]:focus::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 500px;
   margin: 0;
   padding: 0;
@@ -518,7 +518,7 @@ input[type="search"]:focus::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 99px;
   height: 12px;
 
@@ -773,7 +773,7 @@ input[type="search"]:focus::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
   padding: 0;
@@ -1032,6 +1032,7 @@ input[type="search"]:focus::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
   margin-top: 92px;
@@ -1259,7 +1260,7 @@ input[type="search"]:focus::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 760px;
 
@@ -1847,7 +1848,7 @@ input.max-price:focus ~ .icon-max-price::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   align-items: center;
   width: 600px;
   margin: 0;
@@ -1926,7 +1927,7 @@ input.max-price:focus ~ .icon-max-price::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   padding-top: 18px;
@@ -1942,7 +1943,7 @@ input.max-price:focus ~ .icon-max-price::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-content: flex-start;
   width: 360px;
@@ -2076,7 +2077,7 @@ input.max-price:focus ~ .icon-max-price::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -2316,6 +2317,15 @@ input.max-price:focus ~ .icon-max-price::after {
   }
   .footer-services-list {
     width: 470px;
+  }
+  .main-navigation-search input {
+    padding-bottom: 16px;
+  }
+}
+
+@supports (-ms-ime-align: auto) {
+  .main-navigation-search input {
+    padding-bottom: 16px;
   }
 }
 
